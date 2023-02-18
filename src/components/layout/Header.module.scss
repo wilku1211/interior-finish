@@ -1,0 +1,58 @@
+@import "../../assets/styles/theme.module.scss";
+.header {
+  max-width: 60rem;
+  margin: auto;
+  padding: 2rem;
+  display: flex;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.logo,
+.action {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-basis: 12%;
+}
+
+.list {
+  flex-basis: 60%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  gap: 1rem;
+  a {
+    font-family: $first-font;
+    font-weight: 500;
+    :hover {
+      color: $color-black;
+      text-decoration: underline;
+    }
+  }
+}
+.active {
+  color: $color-blue;
+  text-decoration: underline;
+}
+
+.action {
+  display: flex;
+  justify-content: space-around;
+  width: 70%;
+  margin: 0 auto;
+}
+
+.close--menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  > div:first-child {
+    svg {
+      width: 32px;
+    }
+  }
+}
