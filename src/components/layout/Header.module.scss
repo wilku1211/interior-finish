@@ -4,11 +4,22 @@
   margin: auto;
   padding: 2rem;
   display: flex;
-  height: 100vh;
-  display: flex;
+
   flex-direction: column;
   justify-content: space-between;
+
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 9999;
 }
+
+.mobile-open {
+  height: 100vh;
+  background-color: $color-white;
+  overflow: hidden;
+}
+
 .logo,
 .action {
   display: flex;
@@ -53,6 +64,7 @@
   > div:first-child {
     svg {
       width: 32px;
+      height: 32px;
     }
   }
 }
