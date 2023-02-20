@@ -1,0 +1,29 @@
+@import "../../assets/styles/theme.module.scss";
+
+.wrapper {
+  h2 {
+    position: relative;
+    margin: 0 20px;
+    &::before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      left: 0px;
+      top: 0px;
+      height: 65%;
+      width: 80%;
+      background-color: $color-cream;
+    }
+  }
+}
+
+.item {
+  margin: 39px 20px 39px;
+  span {
+    font-size: 16px;
+    font-weight: 700;
+  }
+  p {
+    margin: 12px 0 0;
+  }
+}
