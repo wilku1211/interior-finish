@@ -1,5 +1,5 @@
 import classes from "./WhyWe.module.scss";
-import WhyWy from "../../assets/image/whyWy.jpg";
+import WhyWy from "../../assets/image/index/whyWy.jpg";
 
 const WhyWe = () => {
   return (

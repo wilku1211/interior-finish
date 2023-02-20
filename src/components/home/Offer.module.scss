@@ -1,0 +1,40 @@
+@import "../../assets/styles/theme.module.scss";
+.wrapper {
+  margin: 50px 20px 0;
+  h2 {
+    margin: 0 20px;
+    text-align: center;
+  }
+}
+.fillter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  button {
+    display: block;
+    font-size: 12px;
+    line-height: 11px;
+    font-weight: 500;
+    width: fit-content;
+    text-align: center;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    background: none;
+    border: 1px solid $color-brown;
+    padding: 10px 11px;
+    margin: 20px 0 0;
+  }
+}
+.gallery {
+  margin: 50px 0 0;
+  display: flex;
+  flex-direction: column;
+  > div {
+    display: flex;
+    margin: 0 0 25px;
+    img {
+      width: 100%;
+    }
+  }
+}
