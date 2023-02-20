@@ -1,0 +1,21 @@
+@import "../../../assets/styles/theme.module.scss";
+
+.h2 {
+  text-align: center;
+  margin: 0 0px 39px 0;
+}
+
+.decorated {
+  position: relative;
+  text-align: start;
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 0px;
+    top: 0px;
+    height: 65%;
+    width: 80%;
+    background-color: $color-cream;
+  }
+}

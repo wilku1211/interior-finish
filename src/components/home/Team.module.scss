@@ -1,0 +1,16 @@
+@import "../../assets/styles/theme.module.scss";
+
+.wrapper {
+  margin: 50px 20px 0;
+  a {
+    display: inline-block;
+    margin: 0 0 25px;
+  }
+}
+
+.image-wrapper {
+  margin: 24px 0;
+  img {
+    width: 90%;
+  }
+}

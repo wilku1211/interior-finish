@@ -1,8 +1,12 @@
 @import "../../assets/styles/theme.module.scss";
-
 .wrapper {
   margin: 39px 20px 39px;
-  &::before {
-    width: 70%;
+  h2 {
+    &::before {
+      width: 60%;
+    }
+  }
+  p {
+    margin-top: 26px;
   }
 }

@@ -4,11 +4,12 @@ import FirstImage from "../../assets/image/index/offer1.jpg";
 import TwoImage from "../../assets/image/index/offer2.jpg";
 import TreeImage from "../../assets/image/index/offer3.jpg";
 import FourImage from "../../assets/image/index/offer4.jpg";
+import Header from "../UI/Heading/Heading";
 
 const Offer = () => {
   return (
     <section className={classes.wrapper}>
-      <h2>Oferta</h2>
+      <Header title="Offerta" />
       <div className={classes.fillter}>
         <button>BIEŻĄCE OFERTY</button>
         <button>NASZE REALIZACJE</button>
