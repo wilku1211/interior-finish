@@ -1,4 +1,5 @@
 import React from "react";
+import AboutUs from "../components/home/AboutAs";
 import Comfort from "../components/home/Comfort";
 
 import Hero from "../components/home/Hero";
@@ -16,6 +17,7 @@ const Index = () => {
       <Offer />
       <Comfort />
       <Team />
+      <AboutUs />
     </>
   );
 };
