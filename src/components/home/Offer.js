@@ -5,14 +5,15 @@ import TwoImage from "../../assets/image/index/offer2.jpg";
 import TreeImage from "../../assets/image/index/offer3.jpg";
 import FourImage from "../../assets/image/index/offer4.jpg";
 import Header from "../UI/Heading/Heading";
+import Button from "../UI/Button/Button";
 
 const Offer = () => {
   return (
     <section className={classes.wrapper}>
       <Header title="Offerta" />
       <div className={classes.fillter}>
-        <button>BIEŻĄCE OFERTY</button>
-        <button>NASZE REALIZACJE</button>
+        <Button title="BIEŻĄCE OFERTY" />
+        <Button title="NASZE REALIZACJE" />
       </div>
       <div className={classes.gallery}>
         <div>
