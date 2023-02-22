@@ -1,0 +1,27 @@
+@import "../assets/styles/theme.module.scss";
+.wrapper {
+  margin-top: 148px;
+  h2 {
+    &::before {
+      width: 50%;
+    }
+  }
+  form {
+    margin-top: 32px;
+  }
+}
+
+.call {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin-top: 25px;
+  svg,
+  span {
+    align-self: center;
+  }
+  span {
+    margin-left: 23px;
+    font-family: $Third-font;
+  }
+}

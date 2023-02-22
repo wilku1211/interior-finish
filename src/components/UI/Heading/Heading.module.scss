@@ -19,3 +19,8 @@
     background-color: $color-cream;
   }
 }
+.full-height {
+  &::before {
+    height: 100%;
+  }
+}
