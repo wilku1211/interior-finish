@@ -4,7 +4,7 @@ const Heading = ({ title, isDecorated = false, isFullHeight = false }) => {
   return (
     <h2
       className={`${classes.h2} ${isDecorated ? classes.decorated : ""}  ${
-        isDecorated ? classes["full-height"] : ""
+        isFullHeight ? classes["full-height"] : ""
       }`}
     >
       {title}

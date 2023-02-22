@@ -7,7 +7,7 @@ const WhyWe = () => {
       <div className={classes["content"]}>
         <h3>Obsługę nieruchomości wymyśliliśmy na nowo</h3>
         <p>
-          Modern Studio to nowoczesne biuro nieruchomości z profesjonalnym i
+          Interior finishes to nowoczesne biuro nieruchomości z profesjonalnym i
           innowacyjnym podejściem do tematu nieruchomości i inwestycji.
         </p>
         <p>

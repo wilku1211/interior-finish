@@ -1,0 +1,16 @@
+@import "../../assets/styles/theme.module.scss";
+.hero {
+  margin-top: 107px;
+  position: relative;
+  height: 440px;
+}
+.img-wrapper {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  width: 88%;
+  img {
+    width: 100%;
+  }
+}

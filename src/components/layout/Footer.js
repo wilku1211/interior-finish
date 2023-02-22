@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <footer>
       <div className={classes.header}>
-        <h3 className={classes.h3}>Modern Studio</h3>
+        <h3 className={classes.h3}>Interior finishes</h3>
         <div className={classes.action}>
           <a href="/">
             <Fb />

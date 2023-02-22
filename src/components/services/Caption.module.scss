@@ -1,0 +1,13 @@
+@import "../../assets/styles/theme.module.scss";
+.caption {
+  > div {
+    margin-top: 17px;
+  }
+  svg {
+    height: 12px;
+    margin-right: 8px;
+  }
+  span {
+    font-weight: 700;
+  }
+}
