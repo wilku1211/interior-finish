@@ -1,0 +1,52 @@
+@import "../../assets/styles/theme.module.scss";
+.wrapper {
+  margin-right: 0;
+  margin-left: 0;
+  height: 100vh;
+  position: relative;
+}
+.content {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background: #{"hsl(0deg 0% 0% / 42%)"};
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  flex-direction: column;
+  > div {
+    width: 254px;
+    margin-bottom: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  h1,
+  p {
+    color: $color-white;
+    text-align: center;
+  }
+  h1 {
+    margin: 0;
+  }
+  p {
+    margin-top: 12px;
+    margin-bottom: 32px;
+  }
+  svg {
+    width: 32px;
+    height: 32px;
+  }
+}
+.img-wrapper {
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}

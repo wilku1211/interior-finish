@@ -1,0 +1,48 @@
+@import "../../assets/styles/theme.module.scss";
+.items {
+}
+
+.item {
+  margin-bottom: 120px;
+  :last-child {
+    margin-bottom: 0px;
+  }
+  h2 {
+    &::before {
+      width: 25%;
+    }
+  }
+  &:nth-child(odd) {
+    h2 {
+      &::before {
+        width: 40%;
+      }
+    }
+  }
+}
+.contact {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  > div {
+    font-family: $Third-font;
+    text-decoration: underline;
+    font-size: 18px;
+    display: flex;
+    justify-content: start;
+    margin-bottom: 22px;
+    svg {
+      align-items: center;
+      margin-right: 20px;
+      width: 25px;
+    }
+  }
+}
+
+.img-wrapper {
+  margin-top: 48px;
+  width: 100;
+  img {
+    width: 100%;
+  }
+}
