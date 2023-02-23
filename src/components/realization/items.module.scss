@@ -1,0 +1,37 @@
+@import "../../assets/styles/theme.module.scss";
+.wrapper {
+  margin-top: 89px;
+  h2 {
+    margin-top: 0;
+    padding-right: 20px;
+    display: block;
+    width: fit-content;
+    &::before {
+      transform: translateX(-20px);
+      width: 110%;
+    }
+  }
+  p {
+    margin-top: 30px;
+  }
+  button {
+    margin-top: 20px;
+  }
+}
+.item {
+  margin-top: 89px;
+  svg {
+    width: 10px;
+    height: 10px;
+    margin: 0 10px;
+    transform: rotate(-90deg);
+  }
+}
+
+.image-wrapper {
+  width: 100%;
+  margin-top: 100px;
+  img {
+    width: 100%;
+  }
+}

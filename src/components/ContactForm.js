@@ -70,7 +70,7 @@ const ContactForm = ({ onSubmit }) => {
         </div>
       </div>
       <div className={classes["form-actions"]}>
-        <Button disabled={!isFormValid} title="WYŚLIJ" />
+        <Button disabled={!isFormValid}>WYŚLIJ</Button>
       </div>
     </form>
   );

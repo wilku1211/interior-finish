@@ -129,7 +129,6 @@ const Items = () => {
           </div>
         </li>
       </ul>
-      ;
     </section>
   );
 };

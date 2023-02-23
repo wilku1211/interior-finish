@@ -1,4 +1,4 @@
-const Arrow = ({ fill = "none" }) => {
+const Arrow = ({ fill = "black" }) => {
   return (
     <svg
       width="18"

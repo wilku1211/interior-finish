@@ -12,8 +12,8 @@ const Offer = () => {
     <section className={classes.wrapper}>
       <Header title="Offerta" />
       <div className={classes.fillter}>
-        <Button title="BIEŻĄCE OFERTY" />
-        <Button title="NASZE REALIZACJE" />
+        <Button>BIEŻĄCE OFERTY</Button>
+        <Button>NASZE REALIZACJE</Button>
       </div>
       <div className={classes.gallery}>
         <div>

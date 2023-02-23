@@ -10,6 +10,8 @@ $first-font: "Cormorant Garamond", serif;
 $secondary-font: "Montserrat", sans-serif;
 $Third-font: "Inter", sans-serif;
 
+$body-left-margin: 20px;
+
 @mixin tablet {
   @media only screen and (min-width: 716px) {
     @content;
