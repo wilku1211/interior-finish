@@ -2,6 +2,7 @@
 
 .h2 {
   text-align: center;
+  padding: 8px 0;
 }
 
 .decorated {
@@ -16,6 +17,7 @@
     height: 65%;
     width: 80%;
     background-color: $color-cream;
+    transform: translateX(-20px);
   }
 }
 .full-height {
