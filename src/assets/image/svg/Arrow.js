@@ -1,6 +1,7 @@
-const Arrow = ({ fill = "black" }) => {
+const Arrow = ({ fill = "black", className = "" }) => {
   return (
     <svg
+      className={className}
       width="18"
       height="18"
       viewBox="0 0 18 18"

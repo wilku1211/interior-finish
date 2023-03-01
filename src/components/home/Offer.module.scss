@@ -9,6 +9,9 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  button {
+    border-color: $color-blue;
+  }
 }
 .gallery {
   margin: 50px 0 0;

@@ -1,4 +1,4 @@
-$color-white: #e5e5e5;
+$color-white: #fff;
 $color-darkGrey: #444c54;
 $color-lightGrey: #c3c2c1;
 $color-brown: #2e2b26;
@@ -11,6 +11,7 @@ $first-font: "Cormorant Garamond", serif;
 $secondary-font: "Montserrat", sans-serif;
 $Third-font: "Inter", sans-serif;
 
+$header-height: 80px;
 $body-left-margin: 20px;
 
 @mixin tablet {
@@ -18,3 +19,25 @@ $body-left-margin: 20px;
     @content;
   }
 }
+
+@mixin ozdobnik($color) {
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    clip-path: polygon(0 0, 100% 0, 100% 15%, 15% 15%, 15% 100%, 0 100%);
+    transform: translate(-15px, 15px) rotate(-90deg);
+    width: 50px;
+    height: 50px;
+    background-color: $color;
+    @content;
+  }
+}
+/* 
+{@include ozdobnik($color-cream);
+top: 0;
+    right: 0;
+    transform: translate(15px, -15px) rotate(90deg); }
+    
+    */

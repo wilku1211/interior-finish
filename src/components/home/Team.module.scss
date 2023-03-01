@@ -3,14 +3,25 @@
 .wrapper {
   margin: 50px 20px 0;
   a {
-    display: inline-block;
-    margin: 0 0 25px;
+    display: flex;
+    margin: 35px 0 25px;
+    span {
+      margin-right: 10px;
+    }
+    svg {
+      transform: rotate(-90deg);
+    }
   }
 }
 
 .image-wrapper {
   margin: 24px 0;
+  @include ozdobnik($color-blue);
+  &::before {
+    right: 0;
+    transform: translate(0px, 15px) rotate(180deg);
+  }
   img {
-    width: 90%;
+    min-width: 95%;
   }
 }

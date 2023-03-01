@@ -15,7 +15,9 @@ const WhyWe = () => {
           co jest w stanie zaoferować konkurencja.
         </p>
       </div>
-      <img src={WhyWy} alt="" />
+      <div className={classes["image-wrapper"]}>
+        <img src={WhyWy} alt="" />
+      </div>
     </section>
   );
 };

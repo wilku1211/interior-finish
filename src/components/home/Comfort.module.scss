@@ -9,3 +9,21 @@
     margin-top: 26px;
   }
 }
+.action {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  span {
+    margin-right: 5px;
+  }
+}
+.arrow {
+  transform: rotate(-90deg);
+  width: 17px;
+  height: 17px;
+  display: inline-block;
+  fill: $color-brown;
+  path {
+    fill: $color-brown;
+  }
+}

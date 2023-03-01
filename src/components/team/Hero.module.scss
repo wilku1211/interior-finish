@@ -2,7 +2,9 @@
 .wrapper {
   margin-right: 0;
   margin-left: 0;
-  height: 100vh;
+  height: calc(100vh - #{$header-height});
+  width: 100%;
+  margin-top: #{$header-height};
   position: relative;
 }
 .content {
@@ -12,7 +14,7 @@
   height: 100%;
   background: $color-transparent-overlay;
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   align-items: center;
   flex-direction: column;
   > div {

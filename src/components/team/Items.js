@@ -9,7 +9,10 @@ const Items = () => {
     <section>
       <ul className={classes.items}>
         <li className={classes.item}>
-          <Heading title="Marta Adipisicing" isDecorated isFullHeight />
+          <div className={classes.header}>
+            <Heading title="Marta Adipisicing" isDecorated isFullHeight />
+            <span>Pośrednik nieruchomości nr licencji 666</span>
+          </div>
           <p>
             loremEiusmod velit in et esse id duis veniam deserunt culpa minim
             irure consectetur adipisicing. Amet magna ex nisi et ad dolore
@@ -29,7 +32,10 @@ const Items = () => {
           </div>
         </li>
         <li className={classes.item}>
-          <Heading title="Marta Adipisicing" isDecorated isFullHeight />
+          <div className={classes.header}>
+            <Heading title="Marta Adipisicing" isDecorated isFullHeight />
+            <span>Pośrednik nieruchomości nr licencji 666</span>
+          </div>
           <p>
             loremEiusmod velit in et esse id duis veniam deserunt culpa minim
             irure consectetur adipisicing. Amet magna ex nisi et ad dolore
@@ -49,7 +55,10 @@ const Items = () => {
           </div>
         </li>
         <li className={classes.item}>
-          <Heading title="Marta Adipisicing" isDecorated isFullHeight />
+          <div className={classes.header}>
+            <Heading title="Marta Adipisicing" isDecorated isFullHeight />
+            <span>Pośrednik nieruchomości nr licencji 666</span>
+          </div>
           <p>
             loremEiusmod velit in et esse id duis veniam deserunt culpa minim
             irure consectetur adipisicing. Amet magna ex nisi et ad dolore

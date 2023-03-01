@@ -19,19 +19,19 @@ const Footer = () => {
       </div>
       <ul className={classes.menu}>
         <li>
-          <Link to="/offer">Oferty</Link>
+          <Link to="/offer">Offer</Link>
         </li>
         <li>
-          <Link to="/services">Usługi</Link>
+          <Link to="/services">Services</Link>
         </li>
         <li>
-          <Link to="/realization">Realizacje</Link>
+          <Link to="/realization">Realization</Link>
         </li>
         <li>
-          <Link to="/contact">Kontakt</Link>
+          <Link to="/contact">Contact</Link>
         </li>
         <li>
-          <Link to="/team">Zespół</Link>
+          <Link to="/team">Team</Link>
         </li>
       </ul>
     </footer>

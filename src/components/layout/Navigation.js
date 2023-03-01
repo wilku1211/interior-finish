@@ -8,7 +8,7 @@ import Logo from "../../assets/image/svg/Logo";
 
 const Navigation = ({ onCloseMenu }) => {
   return (
-    <>
+    <div className={classes["mobile-wrapper"]}>
       <div className={classes.logo}>
         <Link to="/">
           <Logo />
@@ -76,7 +76,7 @@ const Navigation = ({ onCloseMenu }) => {
         <Fb />
         <Instagram />
       </div>
-    </>
+    </div>
   );
 };
 

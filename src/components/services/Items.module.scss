@@ -1,9 +1,11 @@
 @import "../../assets/styles/theme.module.scss";
 
-@import "../../assets/styles/theme.module.scss";
-.help {
+.wrapper {
   margin-top: 126px;
-  margin-bottom: 90px;
+  margin-bottom: 20px;
+  h2 {
+    margin-bottom: 75px;
+  }
   h4 {
     font-weight: 700;
     margin-bottom: 0;

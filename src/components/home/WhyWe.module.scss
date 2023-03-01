@@ -13,4 +13,20 @@
   background-color: $color-darkGrey;
   padding: 25px 30px;
   margin: 0 0 11px;
+  @include ozdobnik($color-darkGrey) {
+    top: 0;
+    right: 0;
+    transform: translate(15px, -15px) rotate(90deg);
+  }
+}
+.image-wrapper {
+  width: 90%;
+  height: auto;
+  padding: 0;
+  img {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  @include ozdobnik($color-cream);
 }

@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Arrow from "../../assets/image/svg/Arrow";
 import Item from "../Item";
 import Header from "../UI/Heading/Heading";
 import classes from "./Comfort.module.scss";
@@ -11,7 +12,10 @@ const Comfort = () => {
         isDecorated={true}
         percentDekorate={60}
       />
-      <Link to="/">Sprawdź pełen zakres naszych usług </Link>
+      <Link className={classes.action} to="/">
+        <span> Sprawdź pełen zakres naszych usług</span>
+        <Arrow className={classes.arrow} />{" "}
+      </Link>
       <p>
         To, co dla innych biur nieruchomości wykracza poza zakres usług, dla nas
         jest standardem. Wyróżnia nas bezkompromisowa troska o interes klienta.

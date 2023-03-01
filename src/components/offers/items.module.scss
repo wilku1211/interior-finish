@@ -1,6 +1,6 @@
 @import "../../assets/styles/theme.module.scss";
 .wrapper {
-  margin-bottom: 70px;
+  margin-bottom: 20px;
 }
 .item {
   position: relative;
@@ -24,7 +24,6 @@
   height: 100%;
   display: flex;
   align-items: flex-end;
-  background-color: $color-transparent-overlay;
   font-weight: 700;
   font-family: $Third-font;
   line-height: 26px;
@@ -34,7 +33,7 @@
   }
   h2 {
     font-size: 10px;
-    border-bottom: 1px solid $color-white;
+    border-bottom: 0.5px solid $color-white;
   }
   p {
     font-size: 18px;
