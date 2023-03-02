@@ -13,6 +13,7 @@
   background-color: $color-darkGrey;
   padding: 25px 30px;
   margin: 0 0 11px;
+
   @include ozdobnik($color-darkGrey) {
     top: 0;
     right: 0;
@@ -20,6 +21,7 @@
   }
 }
 .image-wrapper {
+  order: 1;
   width: 90%;
   height: auto;
   padding: 0;
@@ -29,4 +31,6 @@
     padding: 0;
   }
   @include ozdobnik($color-cream);
+}
+@include tablet() {
 }

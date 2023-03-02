@@ -25,3 +25,30 @@
     }
   }
 }
+
+@include tablet() {
+  .gallery {
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: baseline;
+    margin: -30px 0 0;
+    > div {
+      flex-basis: 49%;
+      margin: 0px 0 15px;
+      &:nth-child(2) {
+        transform: translateY(50%);
+        @include ozdobnik($color-blue) {
+          right: 0;
+          top: 0;
+          transform: translate(15px, -15px) rotate(90deg);
+        }
+      }
+      &:nth-child(3) {
+        @include ozdobnik($color-cream) {
+          transform: translate(-15px, 15px) rotate(-90deg);
+        }
+      }
+    }
+  }
+}

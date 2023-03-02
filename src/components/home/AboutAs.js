@@ -5,11 +5,13 @@ import classes from "./AboutAs.module.scss";
 const AboutUs = () => {
   return (
     <section className={classes.wrapper}>
-      <Heading title={"Co mówią o nas nasi klienci?"} isDecorated />
-      <p>
-        Bezkompromisowo wspieramy naszych klientów a ich satysfakcja jest dla
-        nas najważniejszym celem.
-      </p>
+      <div className={classes.header}>
+        <Heading title={"Co mówiąo nas nasi klienci?"} isDecorated />
+        <p>
+          Bezkompromisowo wspieramy naszych klientów a ich satysfakcja jest dla
+          nas najważniejszym celem.
+        </p>
+      </div>
       <div className={classes.comments}>
         <div className={classes.item}>
           <p>

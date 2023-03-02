@@ -5,7 +5,7 @@ import classes from "./Contact.module.scss";
 
 const Contact = () => {
   return (
-    <section>
+    <section className={classes.wrapper}>
       <Heading title={"Napisz do nas"} />
       <ContactForm />
     </section>

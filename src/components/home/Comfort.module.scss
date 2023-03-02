@@ -27,3 +27,35 @@
     fill: $color-brown;
   }
 }
+
+@include tablet {
+  .wrapper {
+    margin-top: 90px;
+  }
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    > div,
+    p {
+      flex-basis: 49%;
+    }
+    h2 {
+      &::before {
+        height: 60%;
+      }
+    }
+  }
+  .items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 40px;
+    > div {
+      flex-basis: 49%;
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+  }
+}

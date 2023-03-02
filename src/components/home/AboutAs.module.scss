@@ -30,3 +30,22 @@
   margin-top: 25px;
   text-transform: capitalize;
 }
+
+@include tablet {
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  .header {
+    p {
+      margin-top: 15px;
+    }
+  }
+  .comments {
+    flex-direction: row;
+    margin-top: 50px;
+  }
+  .item {
+    flex-basis: 49%;
+  }
+}

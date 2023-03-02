@@ -23,10 +23,10 @@ const Offer = () => {
           <img src={TwoImage} alt="TwoImage" />
         </div>
         <div>
-          <img src={FourImage} alt="FourImage" />
+          <img src={TreeImage} alt="TreeImage" />
         </div>
         <div>
-          <img src={TreeImage} alt="TreeImage" />
+          <img src={FourImage} alt="FourImage" />
         </div>
       </div>
     </section>

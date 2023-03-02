@@ -25,3 +25,9 @@
     height: 100%;
   }
 }
+@include tablet() {
+  .decorated::before {
+    height: 100%;
+    width: 50%;
+  }
+}
