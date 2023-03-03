@@ -8,7 +8,7 @@ import Offer4 from "../../assets/image/offers/offer-4.jpg";
 const Items = () => {
   return (
     <section className={classes.wrapper}>
-      <ul>
+      <ul className={classes.items}>
         <li className={classes.item}>
           <div className={classes["image-wrapper"]}>
             <img src={Offer1} alt="Offer1" />

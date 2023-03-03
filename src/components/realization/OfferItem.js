@@ -8,14 +8,16 @@ import Button from "../UI/Button/Button";
 const OfferItem = () => {
   return (
     <li className={classes.item}>
-      <Heading title={"Oferta"} isDecorated isFullHeight />
-      <p>
-        Nieustannie powiększamy swoje portfolio i dodajemy nowe oferty. Sprawdź,
-        czym zajmujemy się teraz.
-      </p>
-      <Button>
-        Zobacz bieżące oferty <Arrow />
-      </Button>
+      <div className={classes.header}>
+        <Heading title={"Oferta"} isDecorated isFullHeight />
+        <p>
+          Nieustannie powiększamy swoje portfolio i dodajemy nowe oferty.
+          Sprawdź, czym zajmujemy się teraz.
+        </p>
+        <Button>
+          Zobacz bieżące oferty <Arrow />
+        </Button>
+      </div>
       <div className={classes["image-wrapper"]}>
         <img src={Item2} alt="Item1" />
       </div>

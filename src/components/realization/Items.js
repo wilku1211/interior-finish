@@ -9,40 +9,92 @@ import OfferItem from "./OfferItem";
 const Items = () => {
   return (
     <section className={classes.wrapper}>
-      <ul>
+      <ul className={classes.items}>
         <li className={classes.item}>
-          <Heading title={"Polna 38"} isDecorated isFullHeight />
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae quia
-            mollitia minus obcaecati optio! Repellendus, voluptas. Nihil
-            accusantium debitis repellat consectetur error omnis, consequatur
-            nesciunt dolores facilis, perspiciatis.
-          </p>
+          <div className={classes.header}>
+            <Heading title={"Polna 38"} isDecorated isFullHeight />
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae quia
+              mollitia minus obcaecati optio! Repellendus, voluptas. Nihil
+              accusantium debitis repellat consectetur error omnis, consequatur
+              nesciunt dolores facilis, perspiciatis.
+            </p>
+          </div>
           <div className={classes["image-wrapper"]}>
             <img src={Item1} alt="Item1" />
           </div>
         </li>
+
+        <li className={classes.item}>
+          <div className={classes.header}>
+            <Heading title={"Polna 38"} isDecorated isFullHeight />
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae quia
+              mollitia minus obcaecati optio! Repellendus, voluptas. Nihil
+              accusantium debitis repellat consectetur error omnis, consequatur
+              nesciunt dolores facilis, perspiciatis.
+            </p>
+          </div>
+          <div className={classes["image-wrapper"]}>
+            <img src={Item1} alt="Item1" />
+          </div>
+        </li>
+
+        <li className={classes.item}>
+          <div className={classes.header}>
+            <Heading title={"Polna 38"} isDecorated isFullHeight />
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae quia
+              mollitia minus obcaecati optio! Repellendus, voluptas. Nihil
+              accusantium debitis repellat consectetur error omnis, consequatur
+              nesciunt dolores facilis, perspiciatis.
+            </p>
+          </div>
+          <div className={classes["image-wrapper"]}>
+            <img src={Item1} alt="Item1" />
+          </div>
+        </li>
+
+        <li className={classes.item}>
+          <div className={classes.header}>
+            <Heading title={"Polna 38"} isDecorated isFullHeight />
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae quia
+              mollitia minus obcaecati optio! Repellendus, voluptas. Nihil
+              accusantium debitis repellat consectetur error omnis, consequatur
+              nesciunt dolores facilis, perspiciatis.
+            </p>
+          </div>
+          <div className={classes["image-wrapper"]}>
+            <img src={Item1} alt="Item1" />
+          </div>
+        </li>
+
         <OfferItem />
         <li className={classes.item}>
-          <Heading title={"Sienkiewicza 8"} isDecorated isFullHeight />
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae quia
-            mollitia minus obcaecati optio! Repellendus, voluptas. Nihil
-            accusantium debitis repellat consectetur error omnis, consequatur
-            nesciunt dolores facilis, perspiciatis impedit nisi.
-          </p>
+          <div className={classes.header}>
+            <Heading title={"Leśna 8"} isDecorated isFullHeight />
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae quia
+              mollitia minus obcaecati optio! Repellendus, voluptas. Nihil
+              accusantium debitis repellat consectetur error omnis, consequatur
+              nesciunt dolores facilis, perspiciatis impedit nisi.
+            </p>
+          </div>
           <div className={classes["image-wrapper"]}>
             <img src={Item3} alt="Item1" />
           </div>
         </li>
         <li className={classes.item}>
-          <Heading title={"Wojska Polskiego 9"} isDecorated isFullHeight />
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae quia
-            mollitia minus obcaecati optio! Repellendus, voluptas. Nihil
-            accusantium debitis repellat consectetur error omnis, consequatur
-            nesciunt dolores facilis, perspiciatis impedit nisi.
-          </p>
+          <div className={classes.header}>
+            <Heading title={"Wojska Polskiego 9"} isDecorated isFullHeight />
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae quia
+              mollitia minus obcaecati optio! Repellendus, voluptas. Nihil
+              accusantium debitis repellat consectetur error omnis, consequatur
+              nesciunt dolores facilis, perspiciatis impedit nisi.
+            </p>
+          </div>
           <div className={classes["image-wrapper"]}>
             <img src={Item4} alt="Item1" />
           </div>

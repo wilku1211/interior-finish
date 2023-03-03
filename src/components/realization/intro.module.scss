@@ -16,3 +16,21 @@
     width: 100%;
   }
 }
+
+@include tablet {
+  .wrapper {
+    display: flex;
+    width: 80%;
+    margin: 150px auto 0;
+  }
+  .content {
+    margin-right: 15px;
+  }
+  .image-wrapper {
+    max-width: 546px;
+    @include ozdobnik($color-blue) {
+      right: 0;
+      transform: translate(35px, 35px) rotate(-180deg);
+    }
+  }
+} ;

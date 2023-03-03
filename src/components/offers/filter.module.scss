@@ -13,3 +13,13 @@
     font-weight: 700;
   }
 }
+
+@include tablet {
+  .wrapper {
+    margin-top: 41px;
+  }
+  .items {
+    width: 481px;
+    margin: 0 auto;
+  }
+} ;
