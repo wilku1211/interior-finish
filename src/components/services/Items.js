@@ -65,6 +65,16 @@ const Items = () => {
             inwestycyjnych (lokata kapitału, analiza rynku).
           </p>
         </li>
+        <li className={classes.item}>
+          <div className={classes["svg-wrapper"]}>
+            <Item5 />
+          </div>
+          <h4>Home staging</h4>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum vel,
+            tempore expedita rerum, quae quisquam laboriosam.
+          </p>
+        </li>
       </ul>
     </section>
   );

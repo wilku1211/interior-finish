@@ -5,6 +5,7 @@ import Hambuger from "../../assets/image/svg/Hambuger";
 import classes from "./Header.module.scss";
 import Navigation from "./Navigation";
 import { Link, useLocation } from "react-router-dom";
+import WideNavigation from "./WideNavigation";
 
 const Header = () => {
   const [isMobileOpenState, setisMobileOpenState] = useState(false);
@@ -30,7 +31,11 @@ const Header = () => {
               <Logo />
             </Link>
           </div>
-          <div onClick={openMenuHandler}>
+          <WideNavigation />
+          <div
+            className={`${classes["wrapper-hambuger"]}`}
+            onClick={openMenuHandler}
+          >
             <Hambuger />
           </div>
         </div>

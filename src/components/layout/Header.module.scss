@@ -77,3 +77,9 @@
     }
   }
 }
+
+@include tablet {
+  .wrapper-hambuger {
+    display: none;
+  }
+} ;

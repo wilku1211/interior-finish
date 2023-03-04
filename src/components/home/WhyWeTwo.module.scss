@@ -7,8 +7,11 @@
 }
 
 @include tablet() {
+  .hero {
+    margin: 100px 0 0;
+  }
   .wrapper {
-    margin-top: 120px;
+    margin-top: 0;
     h2 {
       position: relative;
       margin: 0 auto;
@@ -23,9 +26,74 @@
   .items {
     display: flex;
     justify-content: space-between;
-    margin-top: 30px;
+    flex-wrap: wrap;
     > div {
-      flex-basis: 32%;
+      flex-basis: 48%;
+      &:last-child {
+        margin-top: 55px;
+        flex-basis: 100%;
+        display: flex;
+        flex-direction: column;
+        span {
+          text-align: center;
+          margin: 0 auto;
+        }
+        p {
+          text-align: center;
+        }
+      }
     }
   }
 }
+@include desktop {
+  .hero {
+    margin: 120px 0 0;
+    max-width: unset;
+    width: 100vw;
+    height: 259px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("../../assets/image/index/unsplash_7jQh3EiS8Bs.png");
+
+    .wrapper {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      width: 100%;
+      margin: 0 auto;
+      max-width: 1200px;
+      height: 100%;
+      margin-left: 93px;
+    }
+    h2 {
+      max-width: 360px;
+      margin: 0;
+    }
+  }
+  .items {
+    margin-top: 72px;
+    > div {
+      flex-basis: 32%;
+      &:last-child {
+        flex-basis: 32%;
+        margin-top: 35px;
+        span {
+          text-align: left;
+          margin-left: 0;
+        }
+        p {
+          text-align: left;
+        }
+      }
+    }
+  }
+}
+
+@include desktopXl {
+  .hero {
+    .wrapper {
+      margin-left: auto;
+    }
+  }
+} ;

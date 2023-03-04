@@ -19,11 +19,13 @@ const Comfort = () => {
             <Arrow className={classes.arrow} />{" "}
           </Link>
         </div>
-        <p>
-          To, co dla innych biur nieruchomości wykracza poza zakres usług, dla
-          nas jest standardem. Wyróżnia nas bezkompromisowa troska o interes
-          klienta.
-        </p>
+        <div>
+          <p>
+            To, co dla innych biur nieruchomości wykracza poza zakres usług, dla
+            nas jest standardem. Wyróżnia nas bezkompromisowa troska o interes
+            klienta.
+          </p>
+        </div>
       </div>
       <div className={classes.items}>
         <Item

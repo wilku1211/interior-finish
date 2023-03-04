@@ -10,4 +10,24 @@
   span {
     font-weight: 700;
   }
+  .action {
+    margin-top: 20px;
+    display: block;
+  }
 }
+
+@include tablet {
+  .caption {
+    margin-top: 48px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .content {
+      margin: 0;
+      flex-basis: 70%;
+      order: 1;
+    }
+  }
+} ;

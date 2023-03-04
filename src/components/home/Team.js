@@ -10,15 +10,15 @@ const Team = () => {
     <section className={classes.wrapper}>
       <div className={classes.header}>
         <div className={classes.content}>
-          <Heading title={"Poznaj nasz zespół"} />
+          <Heading title={"Poznaj nasz zespół"} isDecorated isFullHeight />
 
-          <Link>
-            <span>Sprawdź, kim jesteśmy</span> <Arrow />
-          </Link>
           <p>
             Dzięki doskonałej współpracy i przyjacielskiej atmosferze udało nam
             się stworzyć zespół dokosnały.
           </p>
+          <Link>
+            <span>Sprawdź, kim jesteśmy</span> <Arrow />
+          </Link>
         </div>
         <div className={`${classes["image-wrapper"]} ${classes["image2"]}`}>
           <img src={TeamImage2} alt="TeamImage2" />

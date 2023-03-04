@@ -79,10 +79,16 @@ img {
   display: block;
 }
 
-@include tablet {
+@include desktop {
   h1 {
     font-size: 54px;
     line-height: 60px;
+  }
+  h3,
+  h2 {
+    font-family: $Third-font;
+    font-weight: 700;
+    color: $color-brown;
   }
   p {
     font-size: 18px;
@@ -92,3 +98,10 @@ img {
     margin: 0 93px;
   }
 }
+
+@include desktopXl {
+  section {
+    margin: 0 auto;
+    max-width: 1200px;
+  }
+} ;

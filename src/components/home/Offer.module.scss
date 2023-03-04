@@ -27,6 +27,15 @@
 }
 
 @include tablet() {
+  .wrapper {
+    margin-top: 100px;
+  }
+  .fillter {
+    flex-direction: row;
+    :first-child {
+      margin-right: 25px;
+    }
+  }
   .gallery {
     justify-content: space-between;
     flex-direction: row;
@@ -41,14 +50,25 @@
         @include ozdobnik($color-blue) {
           right: 0;
           top: 0;
-          transform: translate(15px, -15px) rotate(90deg);
+          transform: translate(35px, -35px) rotate(90deg);
         }
       }
       &:nth-child(3) {
         @include ozdobnik($color-cream) {
-          transform: translate(-15px, 15px) rotate(-90deg);
+          transform: translate(-35px, 35px) rotate(-90deg);
         }
       }
     }
   }
 }
+
+@include desktop {
+  .gallery {
+    margin-top: -80px;
+    > div {
+      &::before {
+        display: none;
+      }
+    }
+  }
+} ;

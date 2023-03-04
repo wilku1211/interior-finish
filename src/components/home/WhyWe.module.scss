@@ -1,7 +1,7 @@
 @import "../../assets/styles/theme.module.scss";
 
 .wrapper {
-  margin: 77px 43px;
+  margin-top: 77px;
   h3,
   p {
     color: $color-white;
@@ -32,5 +32,70 @@
   }
   @include ozdobnik($color-cream);
 }
-@include tablet() {
+
+@include tablet {
+  .wrapper {
+    margin-top: 90px;
+    > div {
+      margin: 0 66px;
+    }
+  }
+  .content {
+    &::before {
+      transform: translate(35px, -35px) rotate(90deg);
+    }
+  }
 }
+
+@include desktop {
+  .wrapper {
+    > div {
+      margin: 0 0;
+    }
+  }
+  .image-wrapper {
+    display: none;
+  }
+  .content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: row;
+    background-color: $color-white;
+
+    p {
+      margin: 10px 0 0;
+    }
+    > div {
+      flex-basis: 47%;
+      &:first-child {
+        order: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+    p {
+      color: $color-black;
+    }
+    h3 {
+      color: $color-brown;
+    }
+    &::before {
+      display: none;
+    }
+  }
+}
+
+@include desktopXl {
+  .wrapper {
+    margin-top: 150px;
+    h3 {
+      font-size: 36px;
+      line-height: 44px;
+    }
+    p {
+      margin-top: 20px;
+    }
+  }
+} ;

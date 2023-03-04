@@ -52,3 +52,12 @@
     object-fit: cover;
   }
 }
+
+@include tablet {
+  .content {
+    > div {
+      width: 375px;
+      margin-bottom: 10%;
+    }
+  }
+} ;

@@ -60,3 +60,10 @@
     text-transform: uppercase;
   }
 }
+
+@include tablet {
+  .wrapper {
+    max-width: 610px;
+    margin: 0 auto;
+  }
+} ;

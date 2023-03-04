@@ -1,7 +1,7 @@
 @import "../../assets/styles/theme.module.scss";
 
 .wrapper {
-  margin: 50px 20px 0;
+  margin-top: 50px;
   a {
     display: flex;
     margin: 35px 0 25px;
@@ -33,7 +33,8 @@
   .wrapper {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
+
     margin-top: 90px;
     > div {
       flex-basis: 49%;
@@ -57,19 +58,19 @@
     max-width: 480px;
   }
   .image2 {
-    display: block;
+    display: none;
     width: 60%;
     margin-left: auto;
     @include ozdobnik($color-cream) {
       left: 0;
 
-      transform: translate(-15px, 15px) rotate(-90deg);
+      transform: translate(-35px, 35px) rotate(-90deg);
     }
   }
   .image1 {
     &:before {
       top: 0;
-      transform: translate(15px, -15px) rotate(90deg);
+      transform: translate(35px, -35px) rotate(90deg);
     }
   }
   .image-wrapper {
@@ -81,3 +82,28 @@
     }
   }
 }
+
+@include desktop {
+  .wrapper {
+    margin-top: 150px;
+  }
+  .header {
+    h2 {
+      &::before {
+        display: none;
+      }
+    }
+  }
+  .image2 {
+    display: block;
+    max-width: 316px;
+  }
+  .image1 {
+    max-width: 550px;
+  }
+  .image-wrapper {
+    &::before {
+      display: none;
+    }
+  }
+} ;

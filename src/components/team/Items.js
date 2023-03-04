@@ -6,7 +6,7 @@ import Mail from "../../assets/image/svg/Mail";
 import Team1 from "../../assets/image/team/team-1.jpg";
 const Items = () => {
   return (
-    <section>
+    <section className={classes.wrapper}>
       <ul className={classes.items}>
         <li className={classes.item}>
           <div className={classes.header}>

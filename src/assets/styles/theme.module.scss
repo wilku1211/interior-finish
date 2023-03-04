@@ -19,6 +19,16 @@ $body-left-margin: 20px;
     @content;
   }
 }
+@mixin desktop {
+  @media only screen and (min-width: 992px) {
+    @content;
+  }
+}
+@mixin desktopXl {
+  @media only screen and (min-width: 1200px) {
+    @content;
+  }
+}
 
 @mixin ozdobnik($color) {
   position: relative;
@@ -37,7 +47,7 @@ $body-left-margin: 20px;
     &::before {
       width: 80px;
       height: 80px;
-      transform: translate(-35px, 35px);
+      transform: translate(-35px, 35px) rotate(-90deg);
       @content;
     }
   }

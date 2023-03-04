@@ -1,6 +1,6 @@
 import React from "react";
-import HeroImage from "../UI/HeroImage/HeroImage";
-import HeroImg from "../../assets/image/index/Hero.jpg";
+
+import HeroDesktop from "../../assets/image/index/hero-desktop.jpg";
 import classes from "./hero.module.scss";
 
 const Hero = () => {
@@ -11,7 +11,9 @@ const Hero = () => {
         <p>Sprawdź, co oznacza dla nas</p>
         <p>bezkonkurencyjność.</p>
       </div>
-      <HeroImage image={HeroImg} />
+      <div className={classes["image-wrapper"]}>
+        <img src={HeroDesktop} alt="HeroDesktop" />
+      </div>
     </section>
   );
 };

@@ -1,9 +1,23 @@
 @import "../../assets/styles/theme.module.scss";
 @include tablet {
   .wrapper {
+    margin-top: 100px;
     form {
       width: 384px;
       margin: 0 auto;
     }
   }
 }
+
+@include desktop {
+  .wrapper {
+    margin: 120px 0 0;
+    padding: 128px 0 59px;
+    max-width: unset;
+    width: 100vw;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("../../assets/image/index/contact-bg.png");
+  }
+} ;

@@ -1,4 +1,4 @@
 @import "../../assets/styles/theme.module.scss";
 .main-wrapper {
-  transform: translateY(-$header-height);
+  margin-top: -$header-height;
 }

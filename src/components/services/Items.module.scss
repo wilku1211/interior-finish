@@ -3,9 +3,7 @@
 .wrapper {
   margin-top: 126px;
   margin-bottom: 20px;
-  h2 {
-    margin-bottom: 75px;
-  }
+
   h4 {
     font-weight: 700;
     margin-bottom: 0;
@@ -23,10 +21,7 @@
 }
 .item {
   flex-basis: 90%;
-  margin-bottom: 82px;
-  &:last-child {
-    margin-bottom: 0;
-  }
+  margin-top: 82px;
 }
 
 .svg-wrapper {
@@ -37,3 +32,29 @@
   justify-content: center;
   align-items: center;
 }
+
+@include tablet {
+  .wrapper {
+    margin-top: 100px;
+    h2 {
+      width: fit-content;
+      &::before {
+        left: unset;
+        right: -10%;
+      }
+    }
+  }
+  .items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .item {
+    flex-basis: 47%;
+    &:last-child {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+} ;
