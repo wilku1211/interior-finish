@@ -9,45 +9,24 @@ const Items = () => {
     <section className={classes.wrapper}>
       <ul className={classes.items}>
         <li className={classes.item}>
-          <div className={classes.header}>
-            <Heading title="Marta Adipisicing" isDecorated isFullHeight />
-            <span>Pośrednik nieruchomości nr licencji 666</span>
-          </div>
-          <p>
-            loremEiusmod velit in et esse id duis veniam deserunt culpa minim
-            irure consectetur adipisicing. Amet magna ex nisi et ad dolore
-            consequat aliquip proident magna pariatur mollit. Culpa eiusmod do
-            dolore ad aliquip aute consectetur nulla eu labore incididunt.
-          </p>
-          <div className={classes.contact}>
-            <div>
-              <Mail /> <span>smt@gmail.com</span>
+          <div className={classes.content}>
+            <div className={classes.header}>
+              <Heading title="Marta Adipisicing" isDecorated isFullHeight />
+              <span>Pośrednik nieruchomości nr licencji 666</span>
             </div>
-            <div>
-              <Tel /> <span>510 666 444</span>
-            </div>
-          </div>
-          <div className={classes["img-wrapper"]}>
-            <img src={Team1} alt="Team1" />
-          </div>
-        </li>
-        <li className={classes.item}>
-          <div className={classes.header}>
-            <Heading title="Marta Adipisicing" isDecorated isFullHeight />
-            <span>Pośrednik nieruchomości nr licencji 666</span>
-          </div>
-          <p>
-            loremEiusmod velit in et esse id duis veniam deserunt culpa minim
-            irure consectetur adipisicing. Amet magna ex nisi et ad dolore
-            consequat aliquip proident magna pariatur mollit. Culpa eiusmod do
-            dolore ad aliquip aute consectetur nulla eu labore incididunt.
-          </p>
-          <div className={classes.contact}>
-            <div>
-              <Mail /> <span>smt@gmail.com</span>
-            </div>
-            <div>
-              <Tel /> <span>510 666 444</span>
+            <p>
+              loremEiusmod velit in et esse id duis veniam deserunt culpa minim
+              irure consectetur adipisicing. Amet magna ex nisi et ad dolore
+              consequat aliquip proident magna pariatur mollit. Culpa eiusmod do
+              dolore ad aliquip aute consectetur nulla eu labore incididunt.
+            </p>
+            <div className={classes.contact}>
+              <div>
+                <Mail /> <span>smt@gmail.com</span>
+              </div>
+              <div>
+                <Tel /> <span>510 666 444</span>
+              </div>
             </div>
           </div>
           <div className={classes["img-wrapper"]}>
@@ -55,42 +34,24 @@ const Items = () => {
           </div>
         </li>
         <li className={classes.item}>
-          <div className={classes.header}>
-            <Heading title="Marta Adipisicing" isDecorated isFullHeight />
-            <span>Pośrednik nieruchomości nr licencji 666</span>
-          </div>
-          <p>
-            loremEiusmod velit in et esse id duis veniam deserunt culpa minim
-            irure consectetur adipisicing. Amet magna ex nisi et ad dolore
-            consequat aliquip proident magna pariatur mollit. Culpa eiusmod do
-            dolore ad aliquip aute consectetur nulla eu labore incididunt.
-          </p>
-          <div className={classes.contact}>
-            <div>
-              <Mail /> <span>smt@gmail.com</span>
+          <div className={classes.content}>
+            <div className={classes.header}>
+              <Heading title="Marta Adipisicing" isDecorated isFullHeight />
+              <span>Pośrednik nieruchomości nr licencji 666</span>
             </div>
-            <div>
-              <Tel /> <span>510 666 444</span>
-            </div>
-          </div>
-          <div className={classes["img-wrapper"]}>
-            <img src={Team1} alt="Team1" />
-          </div>
-        </li>
-        <li className={classes.item}>
-          <Heading title="Marta Adipisicing" isDecorated isFullHeight />
-          <p>
-            loremEiusmod velit in et esse id duis veniam deserunt culpa minim
-            irure consectetur adipisicing. Amet magna ex nisi et ad dolore
-            consequat aliquip proident magna pariatur mollit. Culpa eiusmod do
-            dolore ad aliquip aute consectetur nulla eu labore incididunt.
-          </p>
-          <div className={classes.contact}>
-            <div>
-              <Mail /> <span>smt@gmail.com</span>
-            </div>
-            <div>
-              <Tel /> <span>510 666 444</span>
+            <p>
+              loremEiusmod velit in et esse id duis veniam deserunt culpa minim
+              irure consectetur adipisicing. Amet magna ex nisi et ad dolore
+              consequat aliquip proident magna pariatur mollit. Culpa eiusmod do
+              dolore ad aliquip aute consectetur nulla eu labore incididunt.
+            </p>
+            <div className={classes.contact}>
+              <div>
+                <Mail /> <span>smt@gmail.com</span>
+              </div>
+              <div>
+                <Tel /> <span>510 666 444</span>
+              </div>
             </div>
           </div>
           <div className={classes["img-wrapper"]}>
@@ -98,19 +59,24 @@ const Items = () => {
           </div>
         </li>
         <li className={classes.item}>
-          <Heading title="Marta Adipisicing" isDecorated isFullHeight />
-          <p>
-            loremEiusmod velit in et esse id duis veniam deserunt culpa minim
-            irure consectetur adipisicing. Amet magna ex nisi et ad dolore
-            consequat aliquip proident magna pariatur mollit. Culpa eiusmod do
-            dolore ad aliquip aute consectetur nulla eu labore incididunt.
-          </p>
-          <div className={classes.contact}>
-            <div>
-              <Mail /> <span>smt@gmail.com</span>
+          <div className={classes.content}>
+            <div className={classes.header}>
+              <Heading title="Marta Adipisicing" isDecorated isFullHeight />
+              <span>Pośrednik nieruchomości nr licencji 666</span>
             </div>
-            <div>
-              <Tel /> <span>510 666 444</span>
+            <p>
+              loremEiusmod velit in et esse id duis veniam deserunt culpa minim
+              irure consectetur adipisicing. Amet magna ex nisi et ad dolore
+              consequat aliquip proident magna pariatur mollit. Culpa eiusmod do
+              dolore ad aliquip aute consectetur nulla eu labore incididunt.
+            </p>
+            <div className={classes.contact}>
+              <div>
+                <Mail /> <span>smt@gmail.com</span>
+              </div>
+              <div>
+                <Tel /> <span>510 666 444</span>
+              </div>
             </div>
           </div>
           <div className={classes["img-wrapper"]}>
@@ -118,19 +84,49 @@ const Items = () => {
           </div>
         </li>
         <li className={classes.item}>
-          <Heading title="Marta Adipisicing" isDecorated isFullHeight />
-          <p>
-            loremEiusmod velit in et esse id duis veniam deserunt culpa minim
-            irure consectetur adipisicing. Amet magna ex nisi et ad dolore
-            consequat aliquip proident magna pariatur mollit. Culpa eiusmod do
-            dolore ad aliquip aute consectetur nulla eu labore incididunt.
-          </p>
-          <div className={classes.contact}>
-            <div>
-              <Mail /> <span>smt@gmail.com</span>
+          <div className={classes.content}>
+            <div className={classes.header}>
+              <Heading title="Marta Adipisicing" isDecorated isFullHeight />
+              <span>Pośrednik nieruchomości nr licencji 666</span>
             </div>
-            <div>
-              <Tel /> <span>510 666 444</span>
+            <p>
+              loremEiusmod velit in et esse id duis veniam deserunt culpa minim
+              irure consectetur adipisicing. Amet magna ex nisi et ad dolore
+              consequat aliquip proident magna pariatur mollit. Culpa eiusmod do
+              dolore ad aliquip aute consectetur nulla eu labore incididunt.
+            </p>
+            <div className={classes.contact}>
+              <div>
+                <Mail /> <span>smt@gmail.com</span>
+              </div>
+              <div>
+                <Tel /> <span>510 666 444</span>
+              </div>
+            </div>
+          </div>
+          <div className={classes["img-wrapper"]}>
+            <img src={Team1} alt="Team1" />
+          </div>
+        </li>
+        <li className={classes.item}>
+          <div className={classes.content}>
+            <div className={classes.header}>
+              <Heading title="Marta Adipisicing" isDecorated isFullHeight />
+              <span>Pośrednik nieruchomości nr licencji 666</span>
+            </div>
+            <p>
+              loremEiusmod velit in et esse id duis veniam deserunt culpa minim
+              irure consectetur adipisicing. Amet magna ex nisi et ad dolore
+              consequat aliquip proident magna pariatur mollit. Culpa eiusmod do
+              dolore ad aliquip aute consectetur nulla eu labore incididunt.
+            </p>
+            <div className={classes.contact}>
+              <div>
+                <Mail /> <span>smt@gmail.com</span>
+              </div>
+              <div>
+                <Tel /> <span>510 666 444</span>
+              </div>
             </div>
           </div>
           <div className={classes["img-wrapper"]}>

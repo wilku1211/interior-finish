@@ -1,6 +1,6 @@
 @import "../../assets/styles/theme.module.scss";
 .wrapper {
-  margin-top: 138px;
+  margin-top: 60px;
   p {
     margin-top: 24px;
   }
@@ -9,7 +9,7 @@
 @include tablet {
   .wrapper {
     width: 524px;
-    margin: 150px auto 0;
+    margin: 70px auto 0;
     h2 {
       text-align: center;
       display: block;
@@ -22,3 +22,26 @@
     }
   }
 }
+@include desktop {
+  .wrapper {
+    margin-top: 94px;
+    h2 {
+      &::before {
+        display: none;
+      }
+    }
+    p {
+      margin-top: 20px;
+    }
+  }
+}
+
+@include desktopXl {
+  .wrapper {
+    margin-top: 120px;
+
+    p {
+      margin-top: 28px;
+    }
+  }
+} ;

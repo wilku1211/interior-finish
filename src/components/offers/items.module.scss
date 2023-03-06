@@ -55,15 +55,30 @@
     flex-wrap: wrap;
     width: 90%;
     margin: 70px auto 0;
-    .item {
-      flex-basis: 49%;
-      &:last-child {
-        margin-bottom: 20px;
-      }
-    }
     @include ozdobnik($color-blue) {
       top: 0;
       transform: translate(-35px, -36px);
     }
+  }
+  .item {
+    flex-basis: 49%;
+    &:last-child {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+@include desktop {
+  .wrapper {
+    margin-top: 65px;
+    padding-bottom: 80px;
+  }
+  .items {
+    &::before {
+      display: none;
+    }
+  }
+  .item {
+    flex-basis: 24%;
   }
 } ;

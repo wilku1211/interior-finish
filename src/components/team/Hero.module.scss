@@ -1,11 +1,10 @@
 @import "../../assets/styles/theme.module.scss";
 .wrapper {
-  margin-right: 0;
-  margin-left: 0;
-  height: calc(100vh - #{$header-height});
+  margin: 0;
+  height: calc(100vh);
   width: 100%;
-  margin-top: #{$header-height};
   position: relative;
+  max-width: unset;
 }
 .content {
   position: absolute;
@@ -50,6 +49,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: top;
   }
 }
 
@@ -60,4 +60,7 @@
       margin-bottom: 10%;
     }
   }
+}
+
+@include desktop {
 } ;

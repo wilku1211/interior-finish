@@ -66,4 +66,34 @@
     max-width: 610px;
     margin: 0 auto;
   }
+}
+
+@include desktop {
+  .wrapper {
+    max-width: 1200px;
+    margin-bottom: 150px;
+  }
+  .item {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 150px;
+    &:nth-child(odd) {
+      .content {
+        order: 2;
+      }
+    }
+    .content {
+      flex-basis: 40%;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .img-wrapper {
+      margin: 0;
+      flex-basis: 40%;
+    }
+  }
 } ;

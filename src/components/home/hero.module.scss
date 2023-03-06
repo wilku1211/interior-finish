@@ -2,7 +2,7 @@
 
 .hero-wrapper {
   position: relative;
-  margin: #{$header-height} 0 39px;
+  margin: 0 0 39px;
 }
 
 .content-wrapper {
@@ -38,9 +38,6 @@
 }
 
 @include tablet() {
-  .hero-wrapper {
-    margin-top: #{$header-height};
-  }
   .image-wrapper {
     width: 100vw;
     height: auto;

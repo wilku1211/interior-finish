@@ -22,4 +22,15 @@
     width: 481px;
     margin: 0 auto;
   }
+}
+
+@include desktop {
+  .wrapper {
+    margin-top: 51px;
+  }
+}
+@include desktopXl {
+  .wrapper {
+    margin-top: 61px;
+  }
 } ;

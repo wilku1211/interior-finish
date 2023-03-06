@@ -1,7 +1,7 @@
 import React from "react";
 import classes from "./intro.module.scss";
 import Heading from "../UI/Heading/Heading";
-import IntroImage from "../../assets/image/realization//intro.jpg";
+import IntroImage from "../../assets/image/realization//intro.png";
 
 const Intro = () => {
   return (
