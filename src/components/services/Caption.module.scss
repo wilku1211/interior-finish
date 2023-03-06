@@ -18,16 +18,21 @@
 
 @include tablet {
   .caption {
-    margin-top: 48px;
+    margin-top: 36px;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-between;
+  }
+  .content {
+    margin: 0;
+    flex-basis: 70%;
+    order: 1;
+  }
+}
 
-    .content {
-      margin: 0;
-      flex-basis: 70%;
-      order: 1;
-    }
+@include desktop {
+  .content {
+    flex-basis: 40%;
   }
 } ;

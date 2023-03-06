@@ -82,4 +82,9 @@
   .wrapper-hambuger {
     display: none;
   }
+}
+@include desktop {
+  .close--menu {
+    margin: 0 100px;
+  }
 } ;

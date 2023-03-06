@@ -26,15 +26,24 @@
 
 @include tablet {
   .hero {
-    margin-top: 140px;
+    margin-top: 0px;
   }
   .content {
     top: 30%;
-    width: 86%;
+    width: 63%;
     bottom: auto;
   }
   .img-wrapper {
     width: 70%;
     height: 370px;
+  }
+}
+
+@include desktop {
+  .content {
+    h1 {
+      font-family: $Third-font;
+      font-weight: 700;
+    }
   }
 } ;
