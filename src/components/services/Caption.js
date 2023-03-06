@@ -13,7 +13,7 @@ const Caption = () => {
           pomóc.
         </p>
       </div>
-      <Link className={classes.action}>
+      <Link to="services" className={classes.action}>
         <Arrow /> <span>Czytaj dalej</span>
       </Link>
     </section>

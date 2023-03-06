@@ -6,14 +6,19 @@ import TreeImage from "../../assets/image/index/offer3.jpg";
 import FourImage from "../../assets/image/index/offer4.jpg";
 import Header from "../UI/Heading/Heading";
 import Button from "../UI/Button/Button";
+import { Link } from "react-router-dom";
 
 const Offer = () => {
   return (
     <section className={classes.wrapper}>
       <Header title="Offerta" />
       <div className={classes.fillter}>
-        <Button>BIEŻĄCE OFERTY</Button>
-        <Button>NASZE REALIZACJE</Button>
+        <Link to="offers">
+          <Button>BIEŻĄCE OFERTY</Button>
+        </Link>
+        <Link to="realization">
+          <Button>NASZE REALIZACJE</Button>
+        </Link>
       </div>
       <div className={classes.gallery}>
         <div>

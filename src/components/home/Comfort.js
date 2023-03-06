@@ -14,7 +14,7 @@ const Comfort = () => {
             isDecorated={true}
             percentDekorate={60}
           />
-          <Link className={classes.action} to="/">
+          <Link className={classes.action} to="services">
             <span> Sprawdź pełen zakres naszych usług</span>
             <Arrow className={classes.arrow} />{" "}
           </Link>

@@ -16,7 +16,7 @@ const Team = () => {
             Dzięki doskonałej współpracy i przyjacielskiej atmosferze udało nam
             się stworzyć zespół dokosnały.
           </p>
-          <Link>
+          <Link to="team">
             <span>Sprawdź, kim jesteśmy</span> <Arrow />
           </Link>
         </div>
