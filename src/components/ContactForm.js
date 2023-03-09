@@ -1,3 +1,4 @@
+import { useState } from "react";
 import useInput from "../hooks/useInput";
 import classes from "./ContactForm.module.scss";
 import Button from "./UI/Button/Button";
@@ -12,6 +13,7 @@ const ContactForm = ({ onSubmit }) => {
     hasInputError,
     inputChangeHandler,
     inputBlurHandler,
+    isInputTouchedState,
     reset,
   } = useInput((value) => isNotEmpty(value));
   const {
@@ -20,25 +22,41 @@ const ContactForm = ({ onSubmit }) => {
     hasInputError: hasEmailError,
     inputChangeHandler: emailChangeHandler,
     inputBlurHandler: emailBlurHandler,
+    isInputTouchedState: emailIsInputTouchedState,
     reset: emailReset,
   } = useInput((value) => isEmail(value));
+  const [isSendEmailState, setIsSendEmailState] = useState(false);
 
   let isFormValid = false;
+  let isTouched = false;
 
+  let submitGreenInfo = false;
+
+  if (isInputTouchedState || emailIsInputTouchedState) {
+    isTouched = true;
+  }
   if (inputIsValid && emailIsValid) {
     isFormValid = true;
   }
 
+  if (isSendEmailState && !isTouched && !emailvalue && !valueState) {
+    submitGreenInfo = "Dziekujemy wysłano pomyslnie";
+  }
+
   const submitFormHandler = (e) => {
     e.preventDefault();
+    setIsSendEmailState(false);
     //funkcje wysłania na serwer dostajesz w propszach nigny w form
     if (!isFormValid) {
       return;
     }
     const newObj = {
-      name: "name",
+      email: emailvalue,
+      message: valueState,
     };
-    //onSubmit(newObj)
+    onSubmit(newObj).then((res) =>
+      setIsSendEmailState(res.status === 200 ? true : false)
+    );
     reset();
     emailReset();
   };
@@ -55,7 +73,6 @@ const ContactForm = ({ onSubmit }) => {
             value={emailvalue}
             placeholder="Adres e-mail"
           />
-          {hasEmailError && <p>enter valid email</p>}
         </div>
         <div className={classes["form-control"]}>
           <textarea
@@ -66,11 +83,27 @@ const ContactForm = ({ onSubmit }) => {
             value={valueState}
             placeholder={"Wiadomość"}
           />
-          {hasInputError && <p>enter valid name</p>}
         </div>
       </div>
       <div className={classes["form-actions"]}>
         <Button disabled={!isFormValid}>WYŚLIJ</Button>
+      </div>
+      <div className={classes.info}>
+        <p className={classes.sucess}>{!!submitGreenInfo && submitGreenInfo}</p>
+        <p className={classes.error}>
+          {hasEmailError && (
+            <>
+              {" "}
+              enter valid<span> email,</span>
+            </>
+          )}
+          {hasInputError && (
+            <>
+              {" "}
+              enter valid<span> name</span>
+            </>
+          )}
+        </p>
       </div>
     </form>
   );

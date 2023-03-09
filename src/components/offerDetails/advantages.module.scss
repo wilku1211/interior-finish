@@ -1,0 +1,51 @@
+@import "../../assets/styles/theme.module.scss";
+.wrapper {
+  margin-top: 60px;
+}
+.items {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  div {
+    align-self: center;
+  }
+}
+.item {
+  flex-basis: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 28px;
+  div {
+    align-self: center;
+  }
+}
+.icon-wrapper {
+  margin-right: 20px;
+  width: 40px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  div {
+    align-self: center;
+  }
+}
+
+.content {
+  h4 {
+    font-weight: 700;
+    font-family: $secondary-font;
+    margin: 0;
+  }
+  span {
+    display: block;
+    font-family: $Third-font;
+    margin-top: 4px;
+  }
+}

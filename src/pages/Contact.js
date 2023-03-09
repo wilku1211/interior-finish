@@ -1,11 +1,13 @@
-import React from "react";
 import Heading from "../components/UI/Heading/Heading";
 import classes from "./Contact.module.scss";
 import Tel from "../assets/image/svg/Tel";
 import ContactForm from "../components/ContactForm";
 import ContactImage from "../assets/image/contact/contact.jpg";
+import { sendEmail } from "../utils/email";
 
 const Contact = () => {
+  const submitHandler = (obj) => sendEmail(obj);
+
   return (
     <section className={classes.wrapper}>
       <div className={classes.content}>
@@ -21,7 +23,7 @@ const Contact = () => {
           <span>Telefon: 777 888 999</span>
         </div>
 
-        <ContactForm />
+        <ContactForm onSubmit={submitHandler} />
       </div>
       <div className={classes["image-wrapper"]}>
         <img src={ContactImage} alt="ContactImage" />

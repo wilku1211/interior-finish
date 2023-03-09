@@ -8,6 +8,7 @@ import Team from "./pages/Team";
 import Realization from "./pages/Realization";
 import Services from "./pages/Services";
 import Contact from "./pages/Contact";
+import OfferDetails from "./pages/OfferDetails";
 
 const router = createBrowserRouter([
   {
@@ -21,7 +22,16 @@ const router = createBrowserRouter([
       },
       {
         path: "offers",
-        element: <Offers />,
+        children: [
+          {
+            index: true,
+            element: <Offers />,
+          },
+          {
+            path: ":postId",
+            element: <OfferDetails />,
+          },
+        ],
       },
       {
         path: "realization",
