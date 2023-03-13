@@ -1,0 +1,21 @@
+@import "../assets/styles/theme.module.scss";
+@include tablet {
+  .wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /*     flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center; */
+  }
+}
+@include desktop {
+  .wrapper {
+    margin: 0 auto;
+    padding: 0 50px;
+    max-width: 1200px;
+    section {
+      margin: 30px 0px;
+    }
+  }
+} ;

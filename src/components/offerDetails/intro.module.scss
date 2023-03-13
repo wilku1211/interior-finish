@@ -1,1 +1,12 @@
 @import "../../assets/styles/theme.module.scss";
+@include tablet {
+  .wrapper {
+    grid-column: 1;
+    grid-row: 2;
+    h2 {
+      &::before {
+        display: none;
+      }
+    }
+  }
+} ;

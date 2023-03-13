@@ -49,3 +49,20 @@
     margin-top: 4px;
   }
 }
+
+@include tablet {
+  .wrapper {
+    grid-column: 2;
+    grid-row: 2 / 5;
+  }
+}
+
+@include desktop {
+  .items {
+    align-items: center;
+  }
+  .item {
+    width: 50%;
+    justify-content: flex-start;
+  }
+} ;

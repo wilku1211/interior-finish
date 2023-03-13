@@ -1,0 +1,39 @@
+@import "../../assets/styles/theme.module.scss";
+
+.image-wrapper {
+  width: 100%;
+  height: fit-content;
+  margin: auto;
+
+  img {
+    width: 100%;
+    max-height: 500px;
+    height: 300px;
+    margin: auto;
+    object-position: center;
+    object-fit: cover;
+  }
+}
+.modal-image img {
+  height: 100%;
+  max-height: 80vh;
+}
+
+@include desktop {
+  .image-wrapper {
+    img {
+      height: 400px;
+    }
+  }
+  .modal-image img {
+    height: 100%;
+    max-height: 80vh;
+  }
+}
+@include desktopXl {
+  .image-wrapper {
+    img {
+      height: 500px;
+    }
+  }
+} ;
