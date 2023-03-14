@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Modal from "../UI/Modal";
+import Modal2 from "../UI/Modal2";
 import classes from "./galleryItem.module.scss";
 const GalleryItem = ({ image }) => {
   const [isOpenModalState, setIsOpenModalState] = useState(false);
@@ -11,16 +11,14 @@ const GalleryItem = ({ image }) => {
   return (
     <>
       <div className={classes["image-wrapper"]}>
-        <img src={image} onClick={showModalHandler} alt="image" />
+        <img src={image} onClick={showModalHandler} alt="jon dwsc" />
       </div>
       {isOpenModalState && (
-        <Modal closeModal={hideModalHandler}>
-          <div
-            className={`${classes["image-wrapper"]} ${classes["modal-image"]}`}
-          >
-            <img src={image} onClick={showModalHandler} alt="image" />
+        <Modal2 onCloseModal={hideModalHandler}>
+          <div className={`${classes["modal-image"]}`}>
+            <img src={image} onClick={showModalHandler} alt="jahn brock" />
           </div>
-        </Modal>
+        </Modal2>
       )}
     </>
   );

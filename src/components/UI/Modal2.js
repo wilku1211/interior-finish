@@ -1,31 +1,28 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import classes from "./modal.module.scss";
+import classes from "./modal2.module.scss";
 
-const Backdrop = ({ closeModal }) => {
+const ModalContent = ({ onCloseModal, children }) => {
   return (
-    <div className={classes["backdrop-wrapper"]} onClick={closeModal}>
-      {" "}
-      <button type="button" onClick={closeModal}>
+    <div className={classes.backdrop} onClick={onCloseModal}>
+      <button
+        className={classes["btn-close"]}
+        type="button"
+        onClick={onCloseModal}
+      >
         X
       </button>
+      <div className={classes["modal-window"]}>{children}</div>
     </div>
   );
 };
-const ModalContent = ({ children }) => {
-  return <div className={classes["modal-wrapper"]}>{children}</div>;
-};
 
-const Modal = ({ closeModal, children }) => {
+const Modal = ({ onCloseModal, children }) => {
   return (
     <>
       {ReactDOM.createPortal(
-        <ModalContent children={children} closeModal={closeModal} />,
+        <ModalContent children={children} onCloseModal={onCloseModal} />,
         document.getElementById("modal-root")
-      )}
-      {ReactDOM.createPortal(
-        <Backdrop closeModal={closeModal} />,
-        document.getElementById("backdrop-root")
       )}
     </>
   );
