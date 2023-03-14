@@ -5,8 +5,7 @@ import img2 from "../../assets/image/offerDetails/offer-2.jpg";
 import img3 from "../../assets/image/offerDetails/offer-3.jpg";
 import img4 from "../../assets/image/offerDetails/offer-4.jpg";
 import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+
 import GalleryItem from "./GalleryItem";
 function SampleNextArrow(props) {
   const { className, style, onClick } = props;
@@ -40,15 +39,10 @@ const Gallery = () => {
     slidesToScroll: 1,
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
+    dotsClass: `${classes["custom-dots"]}`,
     appendDots: (dots) => (
-      <div
-        style={{
-          backgroundColor: "#ddd",
-          borderRadius: "10px",
-          padding: "10px",
-        }}
-      >
-        <ul style={{ margin: "0px" }}> {dots} </ul>
+      <div>
+        <ul className={classes["castom-dots"]}> {dots} </ul>
       </div>
     ),
   };
