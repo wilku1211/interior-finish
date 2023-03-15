@@ -10,7 +10,8 @@
 .content {
   margin-top: 22px;
 }
-.custom-dots {
+
+.castom-dots {
   :global(li.slick-active) {
     button::before {
       opacity: 1;
@@ -18,9 +19,6 @@
       color: $color-white;
     }
   }
-}
-
-.castom-dots {
   position: absolute;
   bottom: 10px;
   display: block;
@@ -66,6 +64,34 @@
         -moz-osx-font-smoothing: grayscale;
       }
     }
+  }
+}
+
+.prev-arrow {
+  left: 25px;
+  z-index: 1;
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    clip-path: polygon(40% 0, 55% 0, 15% 50%, 55% 100%, 40% 100%, 0% 50%);
+    width: 22px;
+    height: 22px;
+    background-color: $color-white;
+  }
+}
+.next-arrow {
+  right: 25px;
+  z-index: 1;
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    clip-path: polygon(40% 0, 55% 0, 15% 50%, 55% 100%, 40% 100%, 0% 50%);
+    width: 22px;
+    height: 22px;
+    background-color: $color-white;
+    transform: rotate(180deg);
   }
 }
 

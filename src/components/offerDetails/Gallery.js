@@ -7,45 +7,42 @@ import img4 from "../../assets/image/offerDetails/offer-4.jpg";
 import Slider from "react-slick";
 
 import GalleryItem from "./GalleryItem";
-function SampleNextArrow(props) {
-  const { className, style, onClick } = props;
+function SampleNextArrow({ className, onClick }) {
   return (
     <div
-      className={className}
-      style={{ ...style, display: "block", background: "red" }}
+      className={`${className} ${classes["next-arrow"]}`}
       onClick={onClick}
     />
   );
 }
 
-function SamplePrevArrow(props) {
-  const { className, style, onClick } = props;
+function SamplePrevArrow({ className, onClick }) {
   return (
     <div
-      className={className}
-      style={{ ...style, display: "block", background: "green" }}
+      className={`${className} ${classes["prev-arrow"]}`}
       onClick={onClick}
     />
   );
 }
 
+var settings = {
+  dots: true,
+  infinite: true,
+  arrow: true,
+  autoplay: true,
+  speed: 500,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  nextArrow: <SampleNextArrow />,
+  prevArrow: <SamplePrevArrow />,
+  dotsClass: `${classes["custom-dots"]}`,
+  appendDots: (dots) => (
+    <div>
+      <ul className={classes["castom-dots"]}> {dots} </ul>
+    </div>
+  ),
+};
 const Gallery = () => {
-  var settings = {
-    dots: true,
-    infinite: true,
-    arrow: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    nextArrow: <SampleNextArrow />,
-    prevArrow: <SamplePrevArrow />,
-    dotsClass: `${classes["custom-dots"]}`,
-    appendDots: (dots) => (
-      <div>
-        <ul className={classes["castom-dots"]}> {dots} </ul>
-      </div>
-    ),
-  };
   return (
     <section className={classes.wrapper}>
       <Slider className={classes.slider} {...settings}>

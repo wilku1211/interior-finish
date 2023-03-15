@@ -9,9 +9,8 @@ const ModalContent = ({ onCloseModal, children }) => {
         className={classes["btn-close"]}
         type="button"
         onClick={onCloseModal}
-      >
-        X
-      </button>
+      />
+
       <div className={classes["modal-window"]}>{children}</div>
     </div>
   );
