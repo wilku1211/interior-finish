@@ -29,6 +29,7 @@
 @include tablet() {
   .wrapper {
     margin-top: 100px;
+    padding: 0 20px;
   }
   .fillter {
     flex-direction: row;

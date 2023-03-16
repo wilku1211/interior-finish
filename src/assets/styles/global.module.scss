@@ -78,6 +78,12 @@ footer {
 img {
   display: block;
 }
+/*  */
+@include tablet {
+  body {
+    overflow-x: hidden;
+  }
+}
 
 @include desktop {
   h1 {

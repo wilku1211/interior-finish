@@ -1,4 +1,11 @@
 @import "../../assets/styles/theme.module.scss";
+.loading {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
 .items {
   margin-top: 120px;
 }
