@@ -28,7 +28,7 @@ const router = createBrowserRouter([
             element: <Offers />,
           },
           {
-            path: ":postId",
+            path: ":offerId",
             element: <OfferDetails />,
           },
         ],

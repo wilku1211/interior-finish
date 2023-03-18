@@ -1,11 +1,11 @@
 import React from "react";
 import Heading from "../UI/Heading/Heading";
 import classes from "./intro.module.scss";
-const Intro = () => {
+const Intro = ({ title = "", street = "" }) => {
   return (
     <section className={classes.wrapper}>
-      <span>ROLNA 48</span>
-      <Heading title="Apartament z tarasem na dachu" isDecorated />
+      <span>{street}</span>
+      <Heading title={title} isDecorated />
     </section>
   );
 };

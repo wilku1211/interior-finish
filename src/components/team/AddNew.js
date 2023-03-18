@@ -24,7 +24,8 @@ const AddItem = () => {
         "Amet magna ex nisi et ad dolore consequat aliquip proident magna pariatur mollit Culpa eiusmod do dolore ad aliquip aute consectetur nulla eu labore incididunt. Amet magna ex nisi et ad dolore consequat aliquip proident magna pariatur mollit",
       email: "smtbosniak@gmail.com",
       telephone: "999 666 777",
-      image: lis,
+      image:
+        "https://firebasestorage.googleapis.com/v0/b/react-rest-3374a.appspot.com/o/katarzyna-bosniak.jpg?alt=media",
     };
     sendRequest(newItem);
   };

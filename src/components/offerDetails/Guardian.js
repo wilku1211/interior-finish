@@ -2,7 +2,7 @@ import React from "react";
 import team from "../../assets/image/team/team-1.jpg";
 import classes from "./guardian.module.scss";
 
-const Guardian = () => {
+const Guardian = ({ teamMemberId }) => {
   return (
     <section className={classes.wrapper}>
       <div className={classes["image-wrapper"]}>

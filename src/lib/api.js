@@ -38,28 +38,11 @@ export async function addTeamMember(teamMember) {
 
   return null;
 }
-//
 
-export async function getSingleQuote(quoteId) {
-  const response = await fetch(`${FIREBASE_DOMAIN}/quotes/${quoteId}.json`);
-  const data = await response.json();
-
-  if (!response.ok) {
-    throw new Error(data.message || "Could not fetch quote.");
-  }
-
-  const loadedQuote = {
-    id: quoteId,
-    ...data,
-  };
-
-  return loadedQuote;
-}
-
-export async function addQuote(quoteData) {
-  const response = await fetch(`${FIREBASE_DOMAIN}/quotes.json`, {
+export async function addOffer(offerData) {
+  const response = await fetch(`${FIREBASE_DOMAIN}/offers.json`, {
     method: "POST",
-    body: JSON.stringify(quoteData),
+    body: JSON.stringify(offerData),
     headers: {
       "Content-Type": "application/json",
     },
@@ -73,47 +56,18 @@ export async function addQuote(quoteData) {
   return null;
 }
 
-export async function addComment(requestData) {
-  //sendRequest({ commentData, quoteId });
-  console.log(requestData);
-  const response = await fetch(
-    `${FIREBASE_DOMAIN}/comments/${requestData.quoteId}.json`,
-    {
-      method: "POST",
-      body: JSON.stringify(requestData.commentData),
-      headers: {
-        "Content-Type": "application/json",
-      },
-    }
-  );
+export async function getSingleOffer(offerId) {
+  const response = await fetch(`${FIREBASE_DOMAIN}/offers/${offerId}.json`);
   const data = await response.json();
 
   if (!response.ok) {
-    throw new Error(data.message || "Could not add comment.");
+    throw new Error(data.message || "Could not fetch quote.");
   }
 
-  return { commentId: data.name };
-}
+  const loadedOffer = {
+    id: offerId,
+    ...data,
+  };
 
-export async function getAllComments(quoteId) {
-  const response = await fetch(`${FIREBASE_DOMAIN}/comments/${quoteId}.json`);
-
-  const data = await response.json();
-
-  if (!response.ok) {
-    throw new Error(data.message || "Could not get comments.");
-  }
-
-  const transformedComments = [];
-
-  for (const key in data) {
-    const commentObj = {
-      id: key,
-      ...data[key],
-    };
-
-    transformedComments.push(commentObj);
-  }
-
-  return transformedComments;
+  return loadedOffer;
 }

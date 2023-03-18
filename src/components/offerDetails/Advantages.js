@@ -6,7 +6,26 @@ import Item4 from "../../assets/image/svg/offerDetails/Item4";
 import Item5 from "../../assets/image/svg/offerDetails/Item5";
 import classes from "./advantages.module.scss";
 
-const Advantages = () => {
+const Advantages = ({
+  type = "",
+  typeOffers = "",
+  rooms = [],
+  availability,
+  area = "",
+}) => {
+  const rommStrong = () => {
+    const string = [];
+    for (const key in rooms) {
+      const singlRoom = `${rooms[key]} ${key} / `;
+      string.push(singlRoom);
+    }
+    return string.join("").slice(0, -2);
+  };
+  const date = new Date(+availability);
+  const month = date.toLocaleString("default", { month: "long" });
+  const year = date.getFullYear();
+  const displayDate = `${month} ${year}`;
+
   return (
     <section className={classes.wrapper}>
       <ul className={classes.items}>
@@ -16,7 +35,7 @@ const Advantages = () => {
           </div>
           <div className={classes.content}>
             <h4>Typ budynku:</h4>
-            <span>blok</span>
+            <span>{type}</span>
           </div>
         </li>
         <li className={classes.item}>
@@ -25,7 +44,7 @@ const Advantages = () => {
           </div>
           <div className={classes.content}>
             <h4>Pomieszczenia:</h4>
-            <span>4 pokoje / 2 łazienki</span>
+            <span>{rommStrong()}</span>
           </div>
         </li>
         <li className={classes.item}>
@@ -34,7 +53,7 @@ const Advantages = () => {
           </div>
           <div className={classes.content}>
             <h4>Dostępność:</h4>
-            <span>Styczeń 2022</span>
+            <span>{displayDate}</span>
           </div>
         </li>
         <li className={classes.item}>
@@ -43,7 +62,7 @@ const Advantages = () => {
           </div>
           <div className={classes.content}>
             <h4>Powierzchnia:</h4>
-            <span>95m2</span>
+            <span>{area} m2</span>
           </div>
         </li>
         <li className={classes.item}>
@@ -52,7 +71,7 @@ const Advantages = () => {
           </div>
           <div className={classes.content}>
             <h4>Rodzaj oferty:</h4>
-            <span>wynajem</span>
+            <span>{typeOffers}</span>
           </div>
         </li>
       </ul>

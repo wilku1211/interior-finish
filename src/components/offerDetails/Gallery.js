@@ -35,21 +35,20 @@ var settings = {
   slidesToScroll: 1,
   nextArrow: <SampleNextArrow />,
   prevArrow: <SamplePrevArrow />,
-  dotsClass: `${classes["custom-dots"]}`,
+  dotsClass: `${classes["castom-dots"]}`,
   appendDots: (dots) => (
     <div>
-      <ul className={classes["castom-dots"]}> {dots} </ul>
+      <ul> {dots} </ul>
     </div>
   ),
 };
-const Gallery = () => {
+const Gallery = ({ images = [] }) => {
   return (
     <section className={classes.wrapper}>
       <Slider className={classes.slider} {...settings}>
-        <GalleryItem image={img1} />
-        <GalleryItem image={img2} />
-        <GalleryItem image={img3} />
-        <GalleryItem image={img4} />
+        {images?.map((image) => (
+          <GalleryItem image={image} />
+        ))}
       </Slider>
     </section>
   );

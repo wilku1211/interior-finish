@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { getAllTeamMembers } from "../../lib/api";
 import useHttp from "../../hooks/use-http";
-import NoTeamFound from "./NoTeamFound";
+import NoTeamFound from "../UI/NoTeamFound";
 import LoadingSpinner from "../UI/LoadingSpinner/LoadingSpinner";
 import classes from "./Items.module.scss";
 
