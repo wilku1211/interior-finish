@@ -6,23 +6,26 @@ import Offer3 from "../../assets/image/offers/offer-3.jpg";
 import Offer4 from "../../assets/image/offers/offer-4.jpg";
 import { Link } from "react-router-dom";
 
-const Items = () => {
+const Items = ({ offers = [] }) => {
   return (
     <section className={classes.wrapper}>
       <ul className={classes.items}>
-        <li className={classes.item}>
-          <Link to="-NQnbskK4ZvMsWWJ8n-6">
-            <div className={classes["image-wrapper"]}>
-              <img src={Offer1} alt="Offer1" />
-            </div>
-            <div className={classes.content}>
-              <div className={classes["content-wrapper"]}>
-                <h2>ROLNA 48</h2>
-                <p>Apartament z tarasem na dachu</p>
+        {offers.map((offer) => (
+          <li className={classes.item}>
+            <Link to={offer.id}>
+              <div className={classes["image-wrapper"]}>
+                <img src={offer.image[1]} alt="Offer1" />
               </div>
-            </div>
-          </Link>
-        </li>
+              <div className={classes.content}>
+                <div className={classes["content-wrapper"]}>
+                  <h2>{offer.street}</h2>
+                  <p>{offer.title}</p>
+                </div>
+              </div>
+            </Link>
+          </li>
+        ))}
+
         <li className={classes.item}>
           <div className={classes["image-wrapper"]}>
             <img src={Offer2} alt="Offer1" />

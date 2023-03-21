@@ -1,9 +1,10 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { TeamMemberProvider } from "./store/teamMembers-context";
 
 import Index from "./pages/Index";
-import Layout from "./components/layout/Layout";
+import Layout, { loader as teamLoader } from "./components/layout/Layout";
 import ErrorPage from "./pages/ErrorPage";
-import Offers from "./pages/Offers";
+import Offers, { loader as offersLoader } from "./pages/Offers";
 import Team from "./pages/Team";
 import Realization from "./pages/Realization";
 import Services from "./pages/Services";
@@ -15,6 +16,8 @@ const router = createBrowserRouter([
     path: "/",
     element: <Layout />,
     errorElement: <ErrorPage />,
+    loader: teamLoader,
+    id: "team",
     children: [
       {
         index: true,
@@ -26,6 +29,7 @@ const router = createBrowserRouter([
           {
             index: true,
             element: <Offers />,
+            loader: offersLoader,
           },
           {
             path: ":offerId",
@@ -55,7 +59,11 @@ const router = createBrowserRouter([
 ]);
 
 function App() {
-  return <RouterProvider router={router} />;
+  return (
+    <TeamMemberProvider>
+      <RouterProvider router={router} />;
+    </TeamMemberProvider>
+  );
 }
 
 export default App;

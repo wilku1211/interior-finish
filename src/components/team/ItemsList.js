@@ -7,7 +7,7 @@ const ItemsList = ({ members }) => {
   return (
     <ul className={classes.items}>
       {members?.map((member) => (
-        <li className={classes.item}>
+        <li key={member.id} className={classes.item}>
           <div className={classes.content}>
             <div className={classes.header}>
               <Heading

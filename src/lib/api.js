@@ -4,19 +4,19 @@ const FIREBASE_DOMAIN =
 export async function getAllTeamMembers() {
   const response = await fetch(`${FIREBASE_DOMAIN}/teamMembers.json`);
   const data = await response.json();
-  https: if (!response.ok) {
-    throw new Error(data.message || "Could not fetch quotes.");
+  if (!response.ok) {
+    throw new Error(data.message || "Could not fetch teaam Member.");
   }
 
   const transformedTeamMembers = [];
 
   for (const key in data) {
-    const quoteObj = {
+    const teamObj = {
       id: key,
       ...data[key],
     };
 
-    transformedTeamMembers.push(quoteObj);
+    transformedTeamMembers.push(teamObj);
   }
 
   return transformedTeamMembers;
@@ -55,7 +55,25 @@ export async function addOffer(offerData) {
 
   return null;
 }
+export async function getOffers() {
+  const response = await fetch(`${FIREBASE_DOMAIN}/offers.json`);
+  const data = await response.json();
+  if (!response.ok) {
+    throw new Error(data.message || "Could not fetch teaam Member.");
+  }
 
+  const transformedOffers = [];
+
+  for (const key in data) {
+    const offersObj = {
+      id: key,
+      ...data[key],
+    };
+    transformedOffers.push(offersObj);
+  }
+
+  return transformedOffers;
+}
 export async function getSingleOffer(offerId) {
   const response = await fetch(`${FIREBASE_DOMAIN}/offers/${offerId}.json`);
   const data = await response.json();

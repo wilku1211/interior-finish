@@ -1,4 +1,5 @@
 import React from "react";
+
 import AboutUs from "../components/home/AboutAs";
 import Comfort from "../components/home/Comfort";
 import Contact from "../components/home/Contact";
