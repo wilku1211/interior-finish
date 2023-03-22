@@ -1,4 +1,6 @@
-import React, { useEffect } from "react";
+import React, { Suspense, params, useContext, useEffect } from "react";
+
+import { useLoaderData, defer, Await } from "react-router-dom";
 import useHttp from "../hooks/use-http";
 import { getSingleOffer } from "../lib/api";
 import NoTeamFound from "../components/UI/NoTeamFound";
@@ -10,44 +12,38 @@ import Guardian from "../components/offerDetails/Guardian";
 import Intro from "../components/offerDetails/Intro";
 import Desc from "../components/offerDetails/Desc";
 import classes from "./offerDetails.module.scss";
-import { useParams } from "react-router-dom";
-
+import TeamMemberContext from "../store/teamMembers-context";
 const OfferDetails = () => {
-  const { sendRequest, status, data, error } = useHttp(getSingleOffer, true);
-  const { offerId } = useParams();
+  const { offer } = useLoaderData();
 
-  useEffect(() => {
-    sendRequest(offerId);
-  }, [sendRequest, offerId]);
-
-  if (status === "pending") {
-    return (
-      <section className={classes.loading}>
-        <LoadingSpinner />
-      </section>
-    );
-  }
-  if (error) {
-    return <div>{error}</div>;
-  }
-  if (status === "completed" && (!data || data.length === 0)) {
-    return <NoTeamFound />;
-  }
   return (
-    <div className={classes.wrapper}>
-      <Intro title={data.title} street={data.street} />
-      <Gallery images={data.image} />
-      <Desc description={data.description} />
-      <Advantages
-        type={data.type}
-        typeOffers={data.typeOffers}
-        rooms={data.rooms}
-        availability={data.availability}
-        area={data.area}
-      />
-      <Guardian teamMemberId={data.teamMember} />
-    </div>
+    <Suspense fallback={<p>Loadind...</p>}>
+      <Await resolve={offer}>
+        {(loadOffer) => (
+          <div className={classes.wrapper}>
+            <Intro title={loadOffer.title} street={loadOffer.street} />
+            <Gallery images={loadOffer.image} />
+            <Desc description={loadOffer.description} />
+            <Advantages
+              type={loadOffer.type}
+              typeOffers={loadOffer.typeOffers}
+              rooms={loadOffer.rooms}
+              availability={loadOffer.availability}
+              area={loadOffer.area}
+            />
+            <Guardian teamMemberId={loadOffer.teamMember} />
+          </div>
+        )}
+      </Await>
+    </Suspense>
   );
 };
 
 export default OfferDetails;
+
+export async function loader({ request, params }) {
+  const id = params.offerId;
+  return defer({
+    offer: await getSingleOffer(id),
+  });
+}

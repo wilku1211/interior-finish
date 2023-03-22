@@ -86,6 +86,5 @@ export async function getSingleOffer(offerId) {
     id: offerId,
     ...data,
   };
-
   return loadedOffer;
 }

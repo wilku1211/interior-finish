@@ -47,7 +47,7 @@ const Gallery = ({ images = [] }) => {
     <section className={classes.wrapper}>
       <Slider className={classes.slider} {...settings}>
         {images?.map((image) => (
-          <GalleryItem image={image} />
+          <GalleryItem key={image.image} image={image} />
         ))}
       </Slider>
     </section>

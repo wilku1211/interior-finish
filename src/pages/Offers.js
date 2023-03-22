@@ -12,7 +12,6 @@ const Offers = () => {
   const { offers } = useLoaderData();
   return (
     <>
-      {console.log(offers)}
       <AddNew />
       <Intro />
       <Filter />

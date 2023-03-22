@@ -11,7 +11,7 @@ const Items = ({ offers = [] }) => {
     <section className={classes.wrapper}>
       <ul className={classes.items}>
         {offers.map((offer) => (
-          <li className={classes.item}>
+          <li key={offer.id} className={classes.item}>
             <Link to={offer.id}>
               <div className={classes["image-wrapper"]}>
                 <img src={offer.image[1]} alt="Offer1" />

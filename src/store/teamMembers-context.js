@@ -6,7 +6,7 @@ const TeamContext = React.createContext({
 });
 
 const defaultState = {
-  teamMembers: [{ id: "dddd" }],
+  teamMembers: [],
 };
 
 const type = {

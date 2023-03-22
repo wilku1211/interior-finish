@@ -9,7 +9,9 @@ import Team from "./pages/Team";
 import Realization from "./pages/Realization";
 import Services from "./pages/Services";
 import Contact from "./pages/Contact";
-import OfferDetails from "./pages/OfferDetails";
+import OfferDetails, {
+  loader as singleOffersLoader,
+} from "./pages/OfferDetails";
 
 const router = createBrowserRouter([
   {
@@ -25,6 +27,7 @@ const router = createBrowserRouter([
       },
       {
         path: "offers",
+        errorElement: <ErrorPage />,
         children: [
           {
             index: true,
@@ -34,6 +37,7 @@ const router = createBrowserRouter([
           {
             path: ":offerId",
             element: <OfferDetails />,
+            loader: singleOffersLoader,
           },
         ],
       },

@@ -8,8 +8,8 @@ const Tel = () => {
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M0.75 0.75H15.25V21.25H0.75V0.75ZM2.25 2.25V19.75H13.75V2.25H2.25Z"
         fill="#2E2B26"
       />
