@@ -6,7 +6,7 @@ import Layout, { loader as teamLoader } from "./components/layout/Layout";
 import ErrorPage from "./pages/ErrorPage";
 import Offers, { loader as offersLoader } from "./pages/Offers";
 import Team from "./pages/Team";
-import Realization from "./pages/Realization";
+import Realization, { loader as realizationsLoader } from "./pages/Realization";
 import Services from "./pages/Services";
 import Contact from "./pages/Contact";
 import OfferDetails, {
@@ -44,6 +44,7 @@ const router = createBrowserRouter([
       {
         path: "realization",
         element: <Realization />,
+        loader: realizationsLoader,
       },
       {
         path: "team",

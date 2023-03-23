@@ -7,24 +7,22 @@ import Item3 from "../../assets/image/realization/realization-3.jpg";
 import Item4 from "../../assets/image/realization/realization-4.jpg";
 import OfferItem from "./OfferItem";
 
-const Items = () => {
+const Items = ({ realizations = [] }) => {
   return (
     <section className={classes.wrapper}>
       <ul className={classes.items}>
-        <li className={classes.item}>
-          <div className={classes.header}>
-            <Heading title={"Polna 38"} isDecorated isFullHeight />
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae quia
-              mollitia minus obcaecati optio! Repellendus, voluptas. Nihil
-              accusantium debitis repellat consectetur error omnis, consequatur
-              nesciunt dolores facilis, perspiciatis.
-            </p>
-          </div>
-          <div className={classes["image-wrapper"]}>
-            <img src={Item1} alt="Item1" />
-          </div>
-        </li>
+        {realizations &&
+          realizations.map((realization) => (
+            <li className={classes.item}>
+              <div className={classes.header}>
+                <Heading title={realization.street} isDecorated isFullHeight />
+                <p>{realization.description}</p>
+              </div>
+              <div className={classes["image-wrapper"]}>
+                <img src={realization.image} alt="Item1" />
+              </div>
+            </li>
+          ))}
 
         <li className={classes.item}>
           <div className={classes.header}>

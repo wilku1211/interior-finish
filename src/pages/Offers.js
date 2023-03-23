@@ -25,8 +25,12 @@ const Offers = () => {
 };
 
 export default Offers;
-export async function loader() {
+export async function loader({ request }) {
+  const url = new URL(request.url);
+  const queryParams = new URLSearchParams(url.search);
+  const queryPhrase = queryParams.get("filter");
+  console.log(queryPhrase);
   return defer({
-    offers: await getOffers(),
+    offers: await getOffers(queryPhrase),
   });
 }

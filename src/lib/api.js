@@ -9,7 +9,6 @@ export async function getAllTeamMembers() {
   }
 
   const transformedTeamMembers = [];
-
   for (const key in data) {
     const teamObj = {
       id: key,
@@ -24,6 +23,43 @@ export async function getAllTeamMembers() {
 
 export async function addTeamMember(teamMember) {
   const response = await fetch(`${FIREBASE_DOMAIN}/teamMembers.json`, {
+    method: "POST",
+    body: JSON.stringify(teamMember),
+    headers: {
+      "Content-Type": "application/json",
+    },
+  });
+  const data = await response.json();
+
+  if (!response.ok) {
+    throw new Error(data.message || "Could not create quote.");
+  }
+
+  return null;
+}
+
+export async function getAllRealizations() {
+  const response = await fetch(`${FIREBASE_DOMAIN}/realizations.json`);
+  const data = await response.json();
+  if (!response.ok) {
+    throw new Error(data.message || "Could not fetch teaam Member.");
+  }
+
+  const transformedTeamMembers = [];
+  for (const key in data) {
+    const teamObj = {
+      id: key,
+      ...data[key],
+    };
+
+    transformedTeamMembers.push(teamObj);
+  }
+
+  return transformedTeamMembers;
+}
+
+export async function addRealization(teamMember) {
+  const response = await fetch(`${FIREBASE_DOMAIN}/realizations.json`, {
     method: "POST",
     body: JSON.stringify(teamMember),
     headers: {
@@ -55,7 +91,7 @@ export async function addOffer(offerData) {
 
   return null;
 }
-export async function getOffers() {
+export async function getOffers(filter = null) {
   const response = await fetch(`${FIREBASE_DOMAIN}/offers.json`);
   const data = await response.json();
   if (!response.ok) {
@@ -63,13 +99,24 @@ export async function getOffers() {
   }
 
   const transformedOffers = [];
-
-  for (const key in data) {
-    const offersObj = {
-      id: key,
-      ...data[key],
-    };
-    transformedOffers.push(offersObj);
+  if (filter) {
+    for (const key in data) {
+      if (data[key].type === filter) {
+        const offersObj = {
+          id: key,
+          ...data[key],
+        };
+        transformedOffers.push(offersObj);
+      }
+    }
+  } else {
+    for (const key in data) {
+      const offersObj = {
+        id: key,
+        ...data[key],
+      };
+      transformedOffers.push(offersObj);
+    }
   }
 
   return transformedOffers;

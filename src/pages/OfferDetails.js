@@ -27,7 +27,7 @@ const OfferDetails = () => {
             <Advantages
               type={loadOffer.type}
               typeOffers={loadOffer.typeOffers}
-              rooms={loadOffer.rooms}
+              rooms={loadOffer.rooms ? loadOffer.rooms : loadOffer.media}
               availability={loadOffer.availability}
               area={loadOffer.area}
             />
