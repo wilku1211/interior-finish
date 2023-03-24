@@ -1,6 +1,6 @@
 import React from "react";
 import classes from "./items.module.scss";
-import Item2 from "../../assets/image/realization/realization-2.jpg";
+import Item2 from "../../assets/image/realization/intro.png";
 import Arrow from "../../assets/image/svg/Arrow";
 import Heading from "../UI/Heading/Heading";
 import Button from "../UI/Button/Button";

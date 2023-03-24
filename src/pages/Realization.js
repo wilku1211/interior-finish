@@ -10,7 +10,6 @@ const Realization = () => {
   const { realizations } = useLoaderData();
   return (
     <>
-      <AddItem />
       <Intro />
       <Suspense fallback={<p>Loadind...</p>}>
         <Await resolve={realizations}>
