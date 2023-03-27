@@ -23,7 +23,8 @@ const Header = () => {
         isMobileOpenState && classes["mobile-open"]
       }`}
     >
-      {isMobileOpenState && <Navigation onCloseMenu={closeMenuHandler} />}
+      {/*   {isMobileOpenState && (
+      )} */}
       {!isMobileOpenState && (
         <div className={classes["close--menu"]}>
           <div>
@@ -40,6 +41,10 @@ const Header = () => {
           </div>
         </div>
       )}
+      <Navigation
+        onCloseMenu={closeMenuHandler}
+        isMobileOpen={isMobileOpenState}
+      />
     </header>
   );
 };

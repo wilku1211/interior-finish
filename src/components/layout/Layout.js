@@ -17,7 +17,7 @@ const Layout = () => {
   return (
     <>
       <Header />
-      <main className={classes["main-wrapper"]}>
+      <main className={classes["wrapper"]}>
         <Outlet />
       </main>
       <Footer />
