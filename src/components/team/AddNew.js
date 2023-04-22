@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import lis from "../../assets/image/team/katarzyna-bosniak.jpg";
 
 import useHttp from "../../hooks/use-http";
 import { addTeamMember } from "../../lib/api";
