@@ -11,7 +11,7 @@ const Contact = () => {
   return (
     <section className={classes.wrapper}>
       <div className={classes.content}>
-        <Heading title="Kontakt" isDecorated isFullHeight />
+        <Heading title="Kontakt" isDecorated isFullHeight isAnimation />
 
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. In nemo dicta

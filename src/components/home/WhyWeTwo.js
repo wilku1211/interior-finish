@@ -7,7 +7,11 @@ const WhyWeTwo = () => {
     <>
       <section className={classes.hero}>
         <div className={classes.wrapper}>
-          <Heading title="Dlaczego szukasz właśnie nas?" isDecorated />
+          <Heading
+            title="Dlaczego szukasz właśnie nas?"
+            isDecorated
+            isAnimation
+          />
         </div>
       </section>
       <section className={classes.wrapper}>

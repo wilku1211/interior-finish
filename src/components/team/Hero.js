@@ -2,6 +2,7 @@ import React from "react";
 import HeroImage from "../../assets/image/team/hero.jpg";
 import classes from "./Hero.module.scss";
 import Arrow from "../../assets/image/svg/Arrow";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
@@ -13,7 +14,9 @@ const Hero = () => {
             Razem tworzymy wyjątkowy zespół. Zobacz, dlaczego warto z nami
             współpracować.
           </p>
-          <Arrow fill="white" />
+          <a href="#team-list">
+            <Arrow fill="white" />
+          </a>
         </div>
       </div>
 

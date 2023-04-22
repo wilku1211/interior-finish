@@ -8,11 +8,10 @@ import Footer from "./Footer";
 import Header from "./Header";
 const Layout = () => {
   const { teamMembers } = useLoaderData();
-  const ctx = useContext(TeamMemberContext);
+  const { setTeamMembers } = useContext(TeamMemberContext);
   useEffect(() => {
-    ctx.setTeamMembers(teamMembers);
-    console.log("eee");
-  }, []);
+    setTeamMembers(teamMembers);
+  }, [teamMembers]);
 
   return (
     <>

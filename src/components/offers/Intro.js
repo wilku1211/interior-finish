@@ -4,7 +4,7 @@ import Heading from "../UI/Heading/Heading";
 const Intro = () => {
   return (
     <section className={classes.wrapper}>
-      <Heading title="Nasza oferta" isDecorated isFullHeight />
+      <Heading title="Nasza oferta" isDecorated isFullHeight isAnimation />
       <p>
         Nieustannie poszukujemy nowych ofert nieruchomości. Wybierz typ
         nieruchomości, który Cię interesuje.

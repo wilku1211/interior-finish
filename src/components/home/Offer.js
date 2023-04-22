@@ -7,16 +7,17 @@ import FourImage from "../../assets/image/index/offer4.jpg";
 import Header from "../UI/Heading/Heading";
 import Button from "../UI/Button/Button";
 import { Link } from "react-router-dom";
+import CornerEffect from "../UI/CornerEffect";
 
 const Offer = () => {
   return (
     <section className={classes.wrapper}>
       <Header title="Offerta" />
       <div className={classes.fillter}>
-        <Link to="offers">
+        <Link to="/offers">
           <Button>BIEŻĄCE OFERTY</Button>
         </Link>
-        <Link to="realization">
+        <Link to="/realization">
           <Button>NASZE REALIZACJE</Button>
         </Link>
       </div>
@@ -24,12 +25,12 @@ const Offer = () => {
         <div>
           <img src={FirstImage} alt="FirstImage" />
         </div>
-        <div>
+        <CornerEffect>
           <img src={TwoImage} alt="TwoImage" />
-        </div>
-        <div>
+        </CornerEffect>
+        <CornerEffect>
           <img src={TreeImage} alt="TreeImage" />
-        </div>
+        </CornerEffect>
         <div>
           <img src={FourImage} alt="FourImage" />
         </div>

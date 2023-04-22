@@ -6,7 +6,7 @@ import classes from "./guardian.module.scss";
 const Guardian = ({ teamMemberId }) => {
   const { teamMembers } = useContext(TeamMemberContext);
 
-  const teamMember = teamMembers.find((member) => member.id == teamMemberId);
+  const teamMember = teamMembers.find((member) => member.id === teamMemberId);
   return (
     <section className={classes.wrapper}>
       <div className={classes["image-wrapper"]}>
@@ -14,7 +14,6 @@ const Guardian = ({ teamMemberId }) => {
       </div>
       <div className={classes.content}>
         <h4>Kontakt:</h4>
-        {console.log(teamMember?.id)}
         <span>{`${teamMember?.firstName} ${teamMember?.lastName}`}</span>
         <span>{teamMember?.email}</span>
         <span>{teamMember?.telephone}</span>

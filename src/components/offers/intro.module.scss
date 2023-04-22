@@ -4,6 +4,11 @@
   p {
     margin-top: 24px;
   }
+  h2 {
+    &::before {
+      width: 65%;
+    }
+  }
 }
 
 @include tablet {

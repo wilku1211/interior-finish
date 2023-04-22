@@ -6,7 +6,7 @@ const AboutUs = () => {
   return (
     <section className={classes.wrapper}>
       <div className={classes.header}>
-        <Heading title={"Co mówiąo nas nasi klienci?"} isDecorated />
+        <Heading title={"Co mówią nas nasi klienci?"} isDecorated isAnimation />
         <p>
           Bezkompromisowo wspieramy naszych klientów a ich satysfakcja jest dla
           nas najważniejszym celem.

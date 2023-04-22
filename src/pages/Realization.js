@@ -2,7 +2,6 @@ import { Suspense } from "react";
 
 import { useLoaderData, defer, Await } from "react-router-dom";
 import { getAllRealizations } from "../lib/api";
-import AddItem from "../components/realization/AddNew";
 import Intro from "../components/realization/Intro";
 import Items from "../components/realization/Items";
 

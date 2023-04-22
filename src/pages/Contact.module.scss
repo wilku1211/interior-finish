@@ -3,8 +3,9 @@
   margin-top: 80px;
   h2 {
     margin-bottom: 16px;
+    display: inline-block;
     &::before {
-      width: 50%;
+      width: 80%;
     }
   }
   form {

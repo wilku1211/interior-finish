@@ -1,19 +1,34 @@
 import React from "react";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import classes from "./filter.module.scss";
 
-const Filter = () => {
+const Filter = ({ type = false }) => {
   return (
     <section className={classes.wrapper}>
       <ul className={classes.items}>
         <li className={classes.item}>
-          <Link to={"?filter=flat"}>Mieszkanie</Link>
+          <NavLink
+            to={"?filter=flat"}
+            className={type === "flat" ? classes.active : undefined}
+          >
+            Mieszkanie
+          </NavLink>
         </li>
         <li className={classes.item}>
-          <Link to={"?filter=house"}>Dom</Link>
+          <NavLink
+            to={"?filter=house"}
+            className={type === "house" ? classes.active : undefined}
+          >
+            Dom
+          </NavLink>
         </li>
         <li className={classes.item}>
-          <Link to={"?filter=buildingPlots"}>Działka</Link>
+          <NavLink
+            to={"?filter=buildingPlots"}
+            className={type === "buildingPlots" ? classes.active : undefined}
+          >
+            Działka
+          </NavLink>
         </li>
       </ul>
     </section>

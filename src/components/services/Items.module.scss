@@ -3,6 +3,11 @@
 .wrapper {
   margin-top: 126px;
   margin-bottom: 20px;
+  h2 {
+    &::before {
+      width: 60%;
+    }
+  }
 
   h4 {
     font-weight: 700;
@@ -39,7 +44,6 @@
     h2 {
       width: fit-content;
       &::before {
-        left: unset;
         right: -10%;
       }
     }

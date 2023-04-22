@@ -51,12 +51,12 @@
         @include ozdobnik($color-blue) {
           right: 0;
           top: 0;
-          transform: translate(35px, -35px) rotate(90deg);
+          transform: translate(35px, -35px) rotate(-180deg);
         }
       }
       &:nth-child(3) {
         @include ozdobnik($color-cream) {
-          transform: translate(-35px, 35px) rotate(-90deg);
+          transform: translate(-35px, 35px);
         }
       }
     }
@@ -66,10 +66,10 @@
 @include desktop {
   .gallery {
     margin-top: -80px;
-    > div {
+    /*     > div {
       &::before {
         display: none;
       }
-    }
+    } */
   }
 } ;

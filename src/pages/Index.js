@@ -1,7 +1,6 @@
 import React from "react";
 
 import AboutUs from "../components/home/AboutAs";
-import Comfort from "../components/home/Comfort";
 import Contact from "../components/home/Contact";
 
 import Hero from "../components/home/Hero";
@@ -17,7 +16,6 @@ const Index = () => {
       <WhyWe />
       <WhyWeTwo />
       <Offer />
-      <Comfort />
       <Team />
       <AboutUs />
       <Contact />

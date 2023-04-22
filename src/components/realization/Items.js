@@ -1,8 +1,7 @@
 import React from "react";
+import CornerEffect from "../UI/CornerEffect";
 import Heading from "../UI/Heading/Heading";
 import classes from "./items.module.scss";
-
-import OfferItem from "./OfferItem";
 
 const Items = ({ realizations = [] }) => {
   return (
@@ -10,14 +9,19 @@ const Items = ({ realizations = [] }) => {
       <ul className={classes.items}>
         {realizations &&
           realizations.map((realization) => (
-            <li className={classes.item}>
+            <li className={classes.item} key={realization.street}>
               <div className={classes.header}>
-                <Heading title={realization.street} isDecorated isFullHeight />
+                <Heading
+                  title={realization.street}
+                  isDecorated
+                  isFullHeight
+                  isAnimation
+                />
                 <p>{realization.description}</p>
               </div>
-              <div className={classes["image-wrapper"]}>
+              <CornerEffect className={classes["image-wrapper"]}>
                 <img src={realization.image} alt="Item1" />
-              </div>
+              </CornerEffect>
             </li>
           ))}
 

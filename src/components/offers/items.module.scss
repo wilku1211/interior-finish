@@ -58,15 +58,21 @@
     flex-wrap: wrap;
     width: 90%;
     margin: 70px auto 0;
-    @include ozdobnik($color-blue) {
-      top: 0;
-      transform: translate(-35px, -36px);
-    }
   }
   .item {
     flex-basis: 49%;
+    min-height: 400px;
+
     &:last-child {
       margin-bottom: 20px;
+    }
+  }
+  .item-0 {
+    .image-wrapper {
+      @include ozdobnik($color-blue) {
+        top: 0;
+        transform: translate(-35px, -35px) rotate(90deg);
+      }
     }
   }
 }
@@ -82,6 +88,6 @@
     }
   }
   .item {
-    flex-basis: 24%;
+    flex-basis: 32%;
   }
 } ;

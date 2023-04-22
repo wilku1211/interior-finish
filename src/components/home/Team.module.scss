@@ -12,6 +12,11 @@
       transform: rotate(-90deg);
     }
   }
+  h2 {
+    &:before {
+      width: 50%;
+    }
+  }
 }
 .image2 {
   display: none;
@@ -22,7 +27,7 @@
   @include ozdobnik($color-blue);
   &::before {
     right: 0;
-    transform: translate(0px, 15px) rotate(180deg);
+    transform: translate(0px, 15px) rotate(-90deg);
   }
   img {
     min-width: 95%;
@@ -64,13 +69,13 @@
     @include ozdobnik($color-cream) {
       left: 0;
 
-      transform: translate(-35px, 35px) rotate(-90deg);
+      transform: translate(-35px, 35px) rotate(-180deg);
     }
   }
   .image1 {
     &:before {
       top: 0;
-      transform: translate(35px, -35px) rotate(90deg);
+      transform: translate(35px, -35px) rotate(-180deg);
     }
   }
   .image-wrapper {

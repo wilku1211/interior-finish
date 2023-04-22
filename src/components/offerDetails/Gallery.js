@@ -1,9 +1,6 @@
 import React from "react";
 import classes from "./gallery.module.scss";
-import img1 from "../../assets/image/offerDetails/offer-1.jpg";
-import img2 from "../../assets/image/offerDetails/offer-2.jpg";
-import img3 from "../../assets/image/offerDetails/offer-3.jpg";
-import img4 from "../../assets/image/offerDetails/offer-4.jpg";
+
 import Slider from "react-slick";
 
 import GalleryItem from "./GalleryItem";
@@ -46,8 +43,8 @@ const Gallery = ({ images = [] }) => {
   return (
     <section className={classes.wrapper}>
       <Slider className={classes.slider} {...settings}>
-        {images?.map((image) => (
-          <GalleryItem key={image.image} image={image} />
+        {images?.map((image, i) => (
+          <GalleryItem key={image.image ? image.image : i} image={image} />
         ))}
       </Slider>
     </section>

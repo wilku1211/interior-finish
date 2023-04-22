@@ -1,5 +1,6 @@
 import React from "react";
 import { Suspense } from "react";
+import { useSearchParams } from "react-router-dom";
 
 import { useLoaderData, defer, Await } from "react-router-dom";
 import Filter from "../components/offers/Filter";
@@ -10,11 +11,13 @@ import { getOffers } from "../lib/api";
 
 const Offers = () => {
   const { offers } = useLoaderData();
+  const [searchParams] = useSearchParams();
+
   return (
     <>
-      <AddNew />
       <Intro />
-      <Filter />
+
+      <Filter type={searchParams.get("filter")} />
       <Suspense fallback={<p>Loadind...</p>}>
         <Await resolve={offers}>
           {(loadEvent) => <Items offers={loadEvent} />}
@@ -29,7 +32,6 @@ export async function loader({ request }) {
   const url = new URL(request.url);
   const queryParams = new URLSearchParams(url.search);
   const queryPhrase = queryParams.get("filter");
-  console.log(queryPhrase);
   return defer({
     offers: await getOffers(queryPhrase),
   });

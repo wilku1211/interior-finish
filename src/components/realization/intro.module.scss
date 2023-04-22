@@ -30,7 +30,7 @@
     max-width: 500px;
     @include ozdobnik($color-blue) {
       right: 0;
-      transform: translate(35px, 35px) rotate(-180deg);
+      transform: translate(35px, 35px) rotate(-90deg);
     }
   }
 }

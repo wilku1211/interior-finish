@@ -5,7 +5,7 @@ import Tel from "../../assets/image/svg/Tel";
 import Mail from "../../assets/image/svg/Mail";
 const ItemsList = ({ members }) => {
   return (
-    <ul className={classes.items}>
+    <ul id="team-list" className={classes.items}>
       {members?.map((member) => (
         <li key={member.id} className={classes.item}>
           <div className={classes.content}>
@@ -14,6 +14,7 @@ const ItemsList = ({ members }) => {
                 title={`${member.firstName} ${member.lastName}`}
                 isDecorated
                 isFullHeight
+                isAnimation
               />
               <span>{member.role}</span>
             </div>

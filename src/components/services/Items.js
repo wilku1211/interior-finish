@@ -10,8 +10,13 @@ import Item6 from "../../assets/image/svg/services/Item6";
 
 const Items = () => {
   return (
-    <section className={classes.wrapper}>
-      <Heading title={"Jak możemy Ci pomóc?"} isDecorated />
+    <section id="services-items" className={classes.wrapper}>
+      <Heading
+        title={"Jak możemy Ci pomóc?"}
+        isFullHeight
+        isDecorated
+        isAnimation
+      />
       <ul className={classes.items}>
         <li className={classes.item}>
           <div className={classes["svg-wrapper"]}>

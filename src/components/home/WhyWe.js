@@ -1,10 +1,12 @@
 import classes from "./WhyWe.module.scss";
+
 import WhyWy from "../../assets/image/index/whyWy.jpg";
+import CornerEffect from "../UI/CornerEffect";
 
 const WhyWe = () => {
   return (
     <section className={classes["wrapper"]}>
-      <div className={classes["content"]}>
+      <CornerEffect className={classes["content"]}>
         <div>
           <h3>Obsługę nieruchomości wymyśliliśmy na nowo</h3>
         </div>
@@ -18,10 +20,10 @@ const WhyWe = () => {
             to, co jest w stanie zaoferować konkurencja.
           </p>
         </div>
-      </div>
-      <div className={classes["image-wrapper"]}>
+      </CornerEffect>
+      <CornerEffect className={classes["image-wrapper"]}>
         <img src={WhyWy} alt="" />
-      </div>
+      </CornerEffect>
     </section>
   );
 };

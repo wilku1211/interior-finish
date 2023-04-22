@@ -1,0 +1,16 @@
+@import "../../assets/styles/theme.module.scss";
+.playstate {
+  &::before {
+    animation: changeWiev 1s ease-out forwards;
+  }
+}
+
+@keyframes changeWiev {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(-20px);
+  }
+}

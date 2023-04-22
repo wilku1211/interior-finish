@@ -8,18 +8,6 @@
     margin: 0 0 20px;
   }
 }
-
-.content {
-  background-color: $color-darkGrey;
-  padding: 25px 30px;
-  margin: 0 0 11px;
-
-  @include ozdobnik($color-darkGrey) {
-    top: 0;
-    right: 0;
-    transform: translate(15px, -15px) rotate(90deg);
-  }
-}
 .image-wrapper {
   order: 1;
   width: 90%;
@@ -30,7 +18,20 @@
     margin: 0;
     padding: 0;
   }
-  @include ozdobnik($color-cream);
+  @include ozdobnik($color-cream) {
+  }
+}
+
+.content {
+  background-color: $color-darkGrey;
+  padding: 25px 30px;
+  margin: 0 0 11px;
+
+  @include ozdobnik($color-darkGrey) {
+    top: 0;
+    right: 0;
+    transform: translate(15px, -15px) rotate(-180deg);
+  }
 }
 
 @include tablet {
@@ -42,7 +43,7 @@
   }
   .content {
     &::before {
-      transform: translate(35px, -35px) rotate(90deg);
+      transform: translate(35px, -35px) rotate(-180deg);
     }
   }
 }

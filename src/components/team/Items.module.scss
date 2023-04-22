@@ -16,14 +16,15 @@
     margin-bottom: 0px;
   }
   h2 {
+    display: inline-block;
     &::before {
-      width: 25%;
+      width: 80%;
     }
   }
   &:nth-child(odd) {
     h2 {
       &::before {
-        width: 40%;
+        width: 60%;
       }
     }
   }
