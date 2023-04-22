@@ -9,9 +9,10 @@ import Header from "./Header";
 const Layout = () => {
   const { teamMembers } = useLoaderData();
   const { setTeamMembers } = useContext(TeamMemberContext);
+
   useEffect(() => {
-    setTeamMembers(teamMembers);
-  }, [teamMembers]);
+    !teamMembers && setTeamMembers(teamMembers);
+  }, [setTeamMembers, teamMembers]);
 
   return (
     <>
