@@ -1,7 +1,7 @@
 import React from "react";
 import classes from "./navigation.module.scss";
 
-import { Link, NavLink, useNavigate } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import Fb from "../../assets/image/svg/Fb";
 import Instagram from "../../assets/image/svg/Instagram";
 import Logo from "../../assets/image/svg/Logo";

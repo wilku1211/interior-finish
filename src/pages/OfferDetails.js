@@ -1,10 +1,7 @@
-import React, { Suspense, params, useContext, useEffect } from "react";
+import React, { Suspense } from "react";
 
 import { useLoaderData, defer, Await } from "react-router-dom";
-import useHttp from "../hooks/use-http";
 import { getSingleOffer } from "../lib/api";
-import NoTeamFound from "../components/UI/NoTeamFound";
-import LoadingSpinner from "../components/UI/LoadingSpinner/LoadingSpinner";
 
 import Advantages from "../components/offerDetails/Advantages";
 import Gallery from "../components/offerDetails/Gallery";
@@ -12,7 +9,6 @@ import Guardian from "../components/offerDetails/Guardian";
 import Intro from "../components/offerDetails/Intro";
 import Desc from "../components/offerDetails/Desc";
 import classes from "./offerDetails.module.scss";
-import TeamMemberContext from "../store/teamMembers-context";
 const OfferDetails = () => {
   const { offer } = useLoaderData();
 

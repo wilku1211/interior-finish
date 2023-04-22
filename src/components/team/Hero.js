@@ -2,7 +2,6 @@ import React from "react";
 import HeroImage from "../../assets/image/team/hero.jpg";
 import classes from "./Hero.module.scss";
 import Arrow from "../../assets/image/svg/Arrow";
-import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (

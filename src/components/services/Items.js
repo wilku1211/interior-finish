@@ -3,7 +3,6 @@ import classes from "./Items.module.scss";
 import Heading from "../UI/Heading/Heading";
 import Item1 from "../../assets/image/svg/services/Item1";
 import Item2 from "../../assets/image/svg/services/Item2";
-import Item3 from "../../assets/image/svg/services/Item3";
 import Item4 from "../../assets/image/svg/services/Item4";
 import Item5 from "../../assets/image/svg/services/Item5";
 import Item6 from "../../assets/image/svg/services/Item6";

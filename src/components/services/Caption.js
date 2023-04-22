@@ -1,7 +1,6 @@
 import React from "react";
 import classes from "./Caption.module.scss";
 import Arrow from "../../assets/image/svg/Arrow";
-import { Link } from "react-router-dom";
 
 const Caption = () => {
   return (

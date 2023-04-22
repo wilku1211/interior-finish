@@ -19,7 +19,7 @@ const TitleEffect = ({ className, children, isAnimation, isReverse }) => {
     return () => {
       document.removeEventListener("scroll", handlePlayStateChange);
     };
-  }, []);
+  }, [handlePlayStateChange]);
 
   return (
     <h2

@@ -19,7 +19,7 @@ const CornerEffect = ({ className, children }) => {
     return () => {
       document.removeEventListener("scroll", handlePlayStateChange);
     };
-  }, []);
+  }, [handlePlayStateChange]);
 
   return (
     <div
