@@ -28,7 +28,7 @@ const Header = () => {
       {!isMobileOpenState && (
         <div className={classes["close--menu"]}>
           <div>
-            <Link to="/">
+            <Link to="/" aria-label="Go to home page">
               <Logo />
             </Link>
           </div>
