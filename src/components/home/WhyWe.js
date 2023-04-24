@@ -1,6 +1,6 @@
 import classes from "./WhyWe.module.scss";
 
-import WhyWy from "../../assets/image/index/whyWy.jpg";
+import WhyWy from "../../assets/image/index/whyWy.webp";
 import CornerEffect from "../UI/CornerEffect";
 
 const WhyWe = () => {

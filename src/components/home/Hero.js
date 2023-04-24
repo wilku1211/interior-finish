@@ -1,6 +1,6 @@
 import React from "react";
 
-import HeroDesktop from "../../assets/image/index/hero-desktop.jpg";
+import HeroDesktop from "../../assets/image/index/hero-desktop.webp";
 import classes from "./hero.module.scss";
 
 const Hero = () => {

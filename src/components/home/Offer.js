@@ -1,9 +1,9 @@
 import React from "react";
 import classes from "./Offer.module.scss";
-import FirstImage from "../../assets/image/index/offer1.jpg";
-import TwoImage from "../../assets/image/index/offer2.jpg";
-import TreeImage from "../../assets/image/index/offer3.jpg";
-import FourImage from "../../assets/image/index/offer4.jpg";
+import FirstImage from "../../assets/image/index/offer1.webp";
+import TwoImage from "../../assets/image/index/offer2.webp";
+import TreeImage from "../../assets/image/index/offer3.webp";
+import FourImage from "../../assets/image/index/offer4.webp";
 import Header from "../UI/Heading/Heading";
 import Button from "../UI/Button/Button";
 import { Link } from "react-router-dom";

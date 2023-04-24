@@ -1,5 +1,4 @@
 @import "../../assets/styles/theme.module.scss";
-$bg-img: url("../../assets//image//index//team.png");
 .wrapper {
   margin-top: 50px;
   a {
@@ -27,7 +26,7 @@ $bg-img: url("../../assets//image//index//team.png");
   width: 300px;
   height: 500px;
   > div {
-    background-image: url(../../assets//image//index//team.png);
+    background-image: url(../../assets//image//index//team.webp);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 0px 80%;
