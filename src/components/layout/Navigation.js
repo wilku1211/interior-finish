@@ -20,7 +20,7 @@ const Navigation = ({ onCloseMenu, isMobileOpen }) => {
       />
       <div className={`${classes["mobile-wrapper"]}`}>
         <div className={classes.logo}>
-          <Link to="/">
+          <Link to="/" aria-label="Logo go to page home">
             <Logo />
           </Link>
         </div>

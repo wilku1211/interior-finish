@@ -1,63 +1,103 @@
+import React, { Suspense } from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { TeamMemberProvider } from "./store/teamMembers-context";
 
-import Index from "./pages/Index";
-import Layout, { loader as teamLoader } from "./components/layout/Layout";
-import ErrorPage from "./pages/ErrorPage";
-import Offers, { loader as offersLoader } from "./pages/Offers";
-import Team from "./pages/Team";
-import Realization, { loader as realizationsLoader } from "./pages/Realization";
-import Services from "./pages/Services";
-import Contact from "./pages/Contact";
-import OfferDetails, {
-  loader as singleOffersLoader,
-} from "./pages/OfferDetails";
+import { loader as teamLoader } from "./components/layout/Layout";
+import { loader as offersLoader } from "./pages/Offers";
+import { loader as realizationsLoader } from "./pages/Realization";
+import { loader as singleOffersLoader } from "./pages/OfferDetails";
+const Layout = React.lazy(() => import("./components/layout/Layout"));
+const ErrorPage = React.lazy(() => import("./pages/ErrorPage"));
+const Index = React.lazy(() => import("./pages/Index"));
+const Offers = React.lazy(() => import("./pages/Offers"));
+const OfferDetails = React.lazy(() => import("./pages/OfferDetails"));
+const Team = React.lazy(() => import("./pages/Team"));
+const Realization = React.lazy(() => import("./pages/Realization"));
+const Services = React.lazy(() => import("./pages/Services"));
+const Contact = React.lazy(() => import("./pages/Contact"));
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Layout />,
-    errorElement: <ErrorPage />,
+    element: (
+      <Suspense fallback={<p>Loading...</p>}>
+        <Layout />
+      </Suspense>
+    ),
+    errorElement: (
+      <Suspense fallback={<p>Loading...</p>}>
+        <ErrorPage />
+      </Suspense>
+    ),
     loader: teamLoader,
     id: "team",
     children: [
       {
         index: true,
-        element: <Index />,
+        element: (
+          <Suspense fallback={<p>Loading...</p>}>
+            <Index />
+          </Suspense>
+        ),
       },
       {
         path: "offers",
-        errorElement: <ErrorPage />,
         children: [
           {
             index: true,
-            element: <Offers />,
+            element: (
+              <Suspense fallback={<p>Loading...</p>}>
+                <Offers />
+              </Suspense>
+            ),
             loader: offersLoader,
           },
           {
             path: ":offerId",
-            element: <OfferDetails />,
+            element: (
+              <Suspense fallback={<p>Loading...</p>}>
+                <OfferDetails />
+              </Suspense>
+            ),
+
             loader: singleOffersLoader,
           },
         ],
       },
       {
         path: "realization",
-        element: <Realization />,
+        element: (
+          <Suspense fallback={<p>Loading...</p>}>
+            <Realization />
+          </Suspense>
+        ),
+
         loader: realizationsLoader,
       },
       {
         path: "team",
-        element: <Team />,
+        element: (
+          <Suspense fallback={<p>Loading...</p>}>
+            <Team />
+          </Suspense>
+        ),
       },
       {
         path: "services",
-        element: <Services />,
+        element: (
+          <Suspense fallback={<p>Loading...</p>}>
+            <Services />
+          </Suspense>
+        ),
       },
 
       {
         path: "contact",
-        element: <Contact />,
+        element: (
+          <Suspense fallback={<p>Loading...</p>}>
+            <Contact />
+          </Suspense>
+        ),
       },
     ],
   },

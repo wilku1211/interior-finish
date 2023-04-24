@@ -2,7 +2,7 @@
 
 .wrapper {
   margin-top: 77px;
-  h3,
+  h2,
   p {
     color: $color-white;
     margin: 0 0 20px;
@@ -39,6 +39,10 @@
     margin-top: 90px;
     > div {
       margin: 0 66px;
+    }
+    h2 {
+      font-size: 36px;
+      line-height: 44px;
     }
   }
   .content {
@@ -79,7 +83,7 @@
     p {
       color: $color-black;
     }
-    h3 {
+    h2 {
       color: $color-brown;
     }
     &::before {
@@ -91,7 +95,7 @@
 @include desktopXl {
   .wrapper {
     margin-top: 150px;
-    h3 {
+    h2 {
       font-size: 36px;
       line-height: 44px;
     }
@@ -99,4 +103,4 @@
       margin-top: 20px;
     }
   }
-} ;
+}

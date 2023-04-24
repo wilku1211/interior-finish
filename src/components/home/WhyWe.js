@@ -8,7 +8,7 @@ const WhyWe = () => {
     <section className={classes["wrapper"]}>
       <CornerEffect className={classes["content"]}>
         <div>
-          <h3>Obsługę nieruchomości wymyśliliśmy na nowo</h3>
+          <h2>Obsługę nieruchomości wymyśliliśmy na nowo</h2>
         </div>
         <div>
           <p>
