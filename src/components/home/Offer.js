@@ -32,7 +32,7 @@ const Offer = () => {
           <img src={TreeImage} alt="TreeImage" />
         </CornerEffect>
         <div>
-          <img src={FourImage} alt="FourImage" />
+          <img src={FourImage} alt="FourImage" width="300" height="200" />
         </div>
       </div>
     </section>

@@ -1,5 +1,5 @@
 @import "../../assets/styles/theme.module.scss";
-
+$bg-img: url("../../assets//image//index//team.png");
 .wrapper {
   margin-top: 50px;
   a {
@@ -20,6 +20,20 @@
 }
 .image2 {
   display: none;
+}
+.imgCont {
+  max-width: 400px;
+  max-height: 500px;
+  width: 300px;
+  height: 500px;
+  > div {
+    background-image: url(../../assets//image//index//team.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0px 80%;
+    width: 100%;
+    height: 100%;
+  }
 }
 
 .image-wrapper {
@@ -111,4 +125,4 @@
       display: none;
     }
   }
-} ;
+}

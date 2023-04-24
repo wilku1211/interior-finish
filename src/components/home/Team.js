@@ -33,9 +33,10 @@ const Team = () => {
         </CornerEffect>
       </div>
       <CornerEffect
-        className={`${classes["image-wrapper"]} ${classes["image1"]}`}
+        className={`${classes["image-wrapper"]} ${classes["image1"]} ${classes["imgCont"]}`}
       >
-        <img src={TeamImage} alt="TeamImage" />
+        {/*      <img src={TeamImage} alt="TeamImage" /> */}
+        <div className={classes.image}></div>
       </CornerEffect>
     </section>
   );
