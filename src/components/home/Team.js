@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Heading from "../UI/Heading/Heading";
 import classes from "./Team.module.scss";
-import TeamImage from "../../assets/image/index/team.png";
+//import TeamImage from "../../assets/image/index/team.png";
 import TeamImage2 from "../../assets/image/index/team-2.jpg";
 import Arrow from "../../assets/image/svg/Arrow";
 import CornerEffect from "../UI/CornerEffect";
